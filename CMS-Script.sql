@@ -37,6 +37,7 @@ BID NUMBER(3) references Branch(BID));
 CREATE TABLE Donates
 (DONSSN NUMBER(10,0) references Donor(SSN),
 ActivityName VARCHAR(50) references Activity(ActName),
+constraint pkDonates PRIMARY KEY(DONSSN, ActivityName),
 Code VARCHAR(25),
 DonDate DATE NOT NULL,
 DonTime DATE NOT NULL,
