@@ -49,15 +49,6 @@ BID number(3) references Branch(BID),
 ActivityName varchar2(50) references Activity(ActName),
 constraint pkCamp primary key (CampDate, BID, ActivityName));
                                
-CREATE TABLE BranchPhones
-(BID NUMBER(3) references Branch(BID),
-MOBILENUMBER NUMBER(12,0) NOT NULl primary key);
-
-CREATE TABLE WORKON
-(VOL_SSN NUMBER(10)  references Volunteer(SSN),
-ActivityName varchar2(50) references Activity(ActName),
-StartDate DATE NOT NULL);
-
 CREATE TABLE Employee
 (SSN NUMBER(10,0) primary key, 
 FNAME VARCHAR2(10) NOT NULL, 
@@ -67,3 +58,16 @@ EMAIL VARCHAR2(20),
 MOBILENUMBER NUMBER(12,0) NOT NULL, 
 ADDRESS VARCHAR2(50),
 BID NUMBER(3) references Branch(BID));
+
+CREATE TABLE WORK_ON
+   (	VOL_SSN NUMBER(10) NOT NULL references Volunteer(SSN),
+	   Activity_Name varchar2(50) NOT NULl references Activity(ANAME),
+     Start_date DATE not NULL,
+     constraint pkworkon primary key (VOL_SSN,Activity_Name));
+   
+   
+CREATE TABLE BranchPhones
+(BID NUMBER(3) references Branch(BID),
+MOBILENUMBER NUMBER(12,0) NOT NULl primary key),
+constraint pkBranchPhones primary key (BID,MOBILENUMBER)
+);
