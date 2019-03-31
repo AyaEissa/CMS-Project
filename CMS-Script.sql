@@ -39,6 +39,12 @@ CREATE TABLE Donates
 "Amount" Number(10) NOT NULL);
 
 CREATE TABLE Branch_Phones
-   (	BID NUMBER(3) NOT NULL references Branch(BID),
+   (	BID NUMBER(3) references Branch(BID),
 	  MOBILE_NUMBER NUMBER(12,0) NOT NULl primary key
+   );
+
+CREATE TABLE WORK_ON
+   (	VOL_SSN NUMBER(10)  references Volunteer(SSN),
+	   Activity_Name varchar2(50)  references Activity(ANAME),
+     Start_date DATE NOT NULL
    );
