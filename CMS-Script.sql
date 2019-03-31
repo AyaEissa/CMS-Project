@@ -63,7 +63,7 @@ BID NUMBER(3) references Branch(BID));
 CREATE TABLE WorksOn
 (VOLSSN NUMBER(10) references Volunteer(SSN),
 ActivityName varchar2(50) references Activity(ActName),
-Start_date DATE not NULL,
+StartDate DATE not NULL,
 constraint pkWorksOn primary key (VOLSSN, ActivityName));
    
    
