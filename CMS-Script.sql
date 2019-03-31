@@ -1,6 +1,7 @@
 DROP TABLE Branch cascade constraints;
 DROP TABLE Volunteer cascade constraints;
 DROP TABLE Donor cascade constraints;
+DROP TABLE Activity cascade constraints;
 
 CREATE TABLE Branch
 (BID number(3) primary key,
@@ -23,3 +24,7 @@ CREATE TABLE Donor
 "EMAIL" VARCHAR2(20), 
 "MOBILE_NUMBER" NUMBER(12,0) NOT NULL, 
 "ADDRESS" VARCHAR2(50));
+
+CREATE TABLE Activity
+("Name" VARCHAR(50) PRIMARY KEY,
+"BID" NUMBER(3) references Branch(BID));
