@@ -37,3 +37,8 @@ CREATE TABLE Donates
 "Date" DATE NOT NULL,
 "Time" DATE NOT NULL,
 "Amount" Number(10) NOT NULL);
+
+CREATE TABLE Branch_Phones
+   (	BID NUMBER(3) NOT NULL references Branch(BID),
+	  MOBILE_NUMBER NUMBER(12,0) NOT NULl primary key
+   );
