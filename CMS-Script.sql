@@ -45,3 +45,12 @@ CampDate date,
 BID number(3) references Branch(BID),
 ActivityName varchar2(50) references Activity(ActName),
 constraint pkCamp primary key (CampDate, BID, ActivityName));
+                               
+CREATE TABLE Branch_Phones
+(BID NUMBER(3) references Branch(BID),
+MOBILENUMBER NUMBER(12,0) NOT NULl primary key);
+
+CREATE TABLE WORK_ON
+(VOL_SSN NUMBER(10)  references Volunteer(SSN),
+ActivityName varchar2(50)  references Activity(ANAME),
+StartDate DATE NOT NULL);
