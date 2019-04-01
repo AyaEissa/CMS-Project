@@ -6,7 +6,8 @@ DROP TABLE Donates cascade constraints;
 DROP TABLE Campaign cascade constraints;
 DROP TABLE Employee cascade constraints;
 DROP TABLE BranchPhones cascade constraints;
-DROP TABLE WorksON cascade constraints;
+DROP TABLE WorksOn cascade constraints;
+DROP TABLE BranchActivities cascade constraints;
 
 CREATE TABLE Branch
 (BID number(3) primary key,
@@ -31,8 +32,7 @@ MOBILENUMBER NUMBER(12,0) NOT NULL,
 ADDRESS VARCHAR2(50));
 
 CREATE TABLE Activity
-(ActName VARCHAR(50) PRIMARY KEY,
-BID NUMBER(3) references Branch(BID));
+(ActName VARCHAR(50) PRIMARY KEY);
 
 CREATE TABLE Donates
 (DONSSN NUMBER(10,0) references Donor(SSN),
@@ -45,6 +45,7 @@ Amount Number(10) NOT NULL);
 
 CREATE TABLE Campaign
 (CampName varchar2(30),
+City varchar2(20),
 CampDate date,
 BID number(3) references Branch(BID),
 ActivityName varchar2(50) references Activity(ActName),
@@ -71,3 +72,8 @@ CREATE TABLE BranchPhones
 (BID NUMBER(3) references Branch(BID),
 MOBILENUMBER NUMBER(12,0),
 constraint pkBranchPhones primary key (BID, MOBILENUMBER));
+
+CREATE TABLE BranchActivities
+(BID Number(3) references Branch(BID),
+ActivityName varchar2(50) references Activity(ActName),
+constraint pkBranchActivities primary key (BID, ActivityName));
