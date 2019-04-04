@@ -1,79 +1,82 @@
-DROP TABLE Branch cascade constraints;
-DROP TABLE Volunteer cascade constraints;
-DROP TABLE Donor cascade constraints;
-DROP TABLE Activity cascade constraints;
-DROP TABLE Donates cascade constraints;
-DROP TABLE Campaign cascade constraints;
-DROP TABLE Employee cascade constraints;
-DROP TABLE BranchPhones cascade constraints;
-DROP TABLE WorksOn cascade constraints;
-DROP TABLE BranchActivities cascade constraints;
+DROP TABLE Branch CASCADE CONSTRAINTS;
+DROP TABLE Volunteer CASCADE CONSTRAINTS;
+DROP TABLE Donor CASCADE CONSTRAINTS;
+DROP TABLE Campaign CASCADE CONSTRAINTS;
+DROP TABLE Employee CASCADE CONSTRAINTS;
+DROP TABLE Activity CASCADE CONSTRAINTS;
+DROP TABLE WorksOn CASCADE CONSTRAINTS;
+DROP TABLE Manages CASCADE CONSTRAINTS;
+DROP TABLE DonatesFor CASCADE CONSTRAINTS;
+DROP TABLE BranchPhones CASCADE CONSTRAINTS;
 
 CREATE TABLE Branch
-(BID number(3) primary key,
-Address varchar2(50) not null);
+(BID NUMBER(3) PRIMARY KEY,
+Address VARCHAR2(50) NOT NULL);
 
 CREATE TABLE Volunteer 
-(SSN NUMBER(10,0) primary key, 
-FNAME VARCHAR2(10) NOT NULL, 
+(FNAME VARCHAR2(10) NOT NULL, 
 LNAME VARCHAR2(10) NOT NULL, 
-SEX CHAR(1), 
-EMAIL VARCHAR2(20), 
-MOBILENUMBER NUMBER(12,0) NOT NULL, 
+EMAIL VARCHAR2(20) PRIMARY KEY, 
+BIRTHDATE DATE NOT NULL,
+MOBILENUMBER VARCHAR2(13) NOT NULL, 
 ADDRESS VARCHAR2(50));
 
 CREATE TABLE Donor 
-(SSN NUMBER(10,0) primary key, 
-FNAME VARCHAR2(10) NOT NULL, 
+(FNAME VARCHAR2(10) NOT NULL, 
 LNAME VARCHAR2(10) NOT NULL, 
-SEX CHAR(1), 
-EMAIL VARCHAR2(20), 
-MOBILENUMBER NUMBER(12,0) NOT NULL, 
+EMAIL VARCHAR2(20) PRIMARY KEY, 
+MOBILENUMBER VARCHAR2(13) NOT NULL, 
 ADDRESS VARCHAR2(50));
 
-CREATE TABLE Activity
-(ActName VARCHAR(50) PRIMARY KEY);
-
-CREATE TABLE Donates
-(DONSSN NUMBER(10,0) references Donor(SSN),
-ActivityName VARCHAR(50) references Activity(ActName),
-constraint pkDonates PRIMARY KEY(DONSSN, ActivityName),
-Code VARCHAR(25),
-DonDate DATE NOT NULL,
-DonTime DATE NOT NULL,
-Amount Number(10) NOT NULL);
-
 CREATE TABLE Campaign
-(CampName varchar2(30),
-City varchar2(20),
-CampDate date,
-BID number(3) references Branch(BID),
-ActivityName varchar2(50) references Activity(ActName),
-constraint pkCamp primary key (CampDate, BID, ActivityName));
+(CampName VARCHAR2(30),
+CampDate DATE,
+CampLocation VARCHAR2(50) NOT NULL,
+NumOfReqVolunteer NUMBER(7) NOT NULL,
+CONSTRAINTS pkCampaign PRIMARY KEY(CampName, CampDate));
                                
 CREATE TABLE Employee
-(SSN NUMBER(10,0) primary key, 
+(SSN NUMBER(15) PRIMARY KEY, 
 FNAME VARCHAR2(10) NOT NULL, 
 LNAME VARCHAR2(10) NOT NULL, 
-SEX CHAR(1), 
 EMAIL VARCHAR2(20), 
-MOBILENUMBER NUMBER(12,0) NOT NULL, 
+MOBILENUMBER VARCHAR2(13) NOT NULL, 
 ADDRESS VARCHAR2(50),
-BID NUMBER(3) references Branch(BID));
+BID NUMBER(3) REFERENCES Branch(BID));
+
+CREATE TABLE Activity
+(ActName VARCHAR2(30) NOT NULL,
+CampName VARCHAR2(30),
+CampDate DATE,
+CONSTRAINTS pkActivity PRIMARY KEY(ActName, CampName, CampDate),
+CONSTRAINTS fkActivity FOREIGN KEY(CampName, CampDate) REFERENCES Campaign(CampName, CampDate));
 
 CREATE TABLE WorksOn
-(VOLSSN NUMBER(10) references Volunteer(SSN),
-ActivityName varchar2(50) references Activity(ActName),
-StartDate DATE not NULL,
-constraint pkWorksOn primary key (VOLSSN, ActivityName));
-   
+(VolunteerEmail VARCHAR2(20) REFERENCES Volunteer(Email),
+CampName VARCHAR2(30),
+CampDate DATE,
+CONSTRAINTS pkWorksOn PRIMARY KEY(VolunteerEmail, CampName, CampDate),
+CONSTRAINTS fkWorksOn FOREIGN KEY(CampName, CampDate) REFERENCES Campaign(CampName, CampDate));
+
+CREATE TABLE Manages
+(BID NUMBER(3) REFERENCES Branch(BID),
+CampName VARCHAR2(30),
+CampDate DATE,
+CONSTRAINTS pkManages PRIMARY KEY(BID, CampName, CampDate),
+CONSTRAINTS fkManages FOREIGN KEY(CampName, CampDate) REFERENCES Campaign(CampName, CampDate));
+
+CREATE TABLE DonatesFor
+(DonorEmail VARCHAR2(20) REFERENCES Donor(Email),
+CampName VARCHAR2(30),
+CampDate DATE,
+ReceiptNumber NUMBER(10) NOT NULL,
+DonationDate Date NOT NULL,
+DonationType VARCHAR2(20) NOT NULL,
+Amount NUMBER(10) NOT NULL,
+CONSTRAINTS pkDonatesFor PRIMARY KEY(DonorEmail, CampName, CampDate),
+CONSTRAINTS fkDonatesFor FOREIGN KEY(CampName, CampDate) REFERENCES Campaign(CampName, CampDate));
    
 CREATE TABLE BranchPhones
-(BID NUMBER(3) references Branch(BID),
-MOBILENUMBER NUMBER(12,0),
-constraint pkBranchPhones primary key (BID, MOBILENUMBER));
-
-CREATE TABLE BranchActivities
-(BID Number(3) references Branch(BID),
-ActivityName varchar2(50) references Activity(ActName),
-constraint pkBranchActivities primary key (BID, ActivityName));
+(BID NUMBER(3) REFERENCES Branch(BID),
+MOBILENUMBER VARCHAR2(13) NOT NULL, 
+CONSTRAINTS pkBranchPhones PRIMARY KEY (BID, MOBILENUMBER));
