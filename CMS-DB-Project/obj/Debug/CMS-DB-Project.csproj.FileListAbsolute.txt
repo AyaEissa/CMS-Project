@@ -1,0 +1,9 @@
+C:\Users\Pola Mikhail\Documents\DB-CMS-Project\CMS-DB-Project\bin\Debug\CMS-DB-Project.exe.config
+C:\Users\Pola Mikhail\Documents\DB-CMS-Project\CMS-DB-Project\bin\Debug\CMS-DB-Project.exe
+C:\Users\Pola Mikhail\Documents\DB-CMS-Project\CMS-DB-Project\bin\Debug\CMS-DB-Project.pdb
+C:\Users\Pola Mikhail\Documents\DB-CMS-Project\CMS-DB-Project\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Pola Mikhail\Documents\DB-CMS-Project\CMS-DB-Project\obj\Debug\CMS-DB-Project.csprojResolveAssemblyReference.cache
+C:\Users\Pola Mikhail\Documents\DB-CMS-Project\CMS-DB-Project\obj\Debug\CMS_DB_Project.Properties.Resources.resources
+C:\Users\Pola Mikhail\Documents\DB-CMS-Project\CMS-DB-Project\obj\Debug\CMS-DB-Project.csproj.GenerateResource.Cache
+C:\Users\Pola Mikhail\Documents\DB-CMS-Project\CMS-DB-Project\obj\Debug\CMS-DB-Project.exe
+C:\Users\Pola Mikhail\Documents\DB-CMS-Project\CMS-DB-Project\obj\Debug\CMS-DB-Project.pdb
