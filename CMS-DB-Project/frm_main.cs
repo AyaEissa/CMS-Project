@@ -23,5 +23,12 @@ namespace CMS_DB_Project
             volunteerForm.MdiParent = this;
             volunteerForm.Show();
         }
+
+        private void employeesWorksForBranchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_employeesworksforbranch empForBranch = new frm_employeesworksforbranch();
+            empForBranch.MdiParent = this;
+            empForBranch.Show();
+        }
     }
 }

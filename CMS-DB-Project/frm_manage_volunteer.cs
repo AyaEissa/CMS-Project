@@ -18,6 +18,7 @@ namespace CMS_DB_Project
         OracleConnection con;
         OracleCommand cmd;
         int chooseFlag = -1;
+        int lastItemSelected = -1;
 
         public frm_manage_volunteer()
         {
@@ -126,7 +127,7 @@ namespace CMS_DB_Project
 
             updateListView();
 
-            if(volunteerListView.Items.Count > 0)
+            if (volunteerListView.Items.Count > 0)
             {
                 volunteerListView.Items[0].Selected = true;
                 volunteerListView.Select();
@@ -135,16 +136,7 @@ namespace CMS_DB_Project
 
         private void volunteerListView_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (volunteerListView.SelectedItems.Count != 0)
-            {
-                txt_email.Text = volunteerListView.SelectedItems[0].SubItems[0].Text;
-                txt_fname.Text = volunteerListView.SelectedItems[0].SubItems[1].Text;
-                txt_lname.Text = volunteerListView.SelectedItems[0].SubItems[2].Text;
-                txt_birthdate.Text = volunteerListView.SelectedItems[0].SubItems[3].Text;
-                txt_mobile.Text = volunteerListView.SelectedItems[0].SubItems[4].Text;
-                txt_address.Text = volunteerListView.SelectedItems[0].SubItems[5].Text;
-                txt_age.Text = (DateTime.Now.Year - Convert.ToDateTime(txt_birthdate.Text).Year).ToString() + " Years";
-            }
+            fillTextBoxes();
         }
 
         private void btn_save_Click(object sender, EventArgs e)
@@ -154,7 +146,7 @@ namespace CMS_DB_Project
                 cmd.Parameters.Add("email", txt_email.Text);
                 cmd.Parameters.Add("fname", txt_fname.Text);
                 cmd.Parameters.Add("lname", txt_lname.Text);
-                cmd.Parameters.Add("birthdate", txt_birthdate.Text);
+                cmd.Parameters.Add("birthdate", Convert.ToDateTime(txt_birthdate.Text).Date);
                 cmd.Parameters.Add("mobile", txt_mobile.Text);
                 cmd.Parameters.Add("address", txt_address.Text);
             }
@@ -162,7 +154,7 @@ namespace CMS_DB_Project
             {
                 cmd.Parameters.Add("fname", txt_fname.Text);
                 cmd.Parameters.Add("lname", txt_lname.Text);
-                cmd.Parameters.Add("birthdate", txt_birthdate.Text);
+                cmd.Parameters.Add("birthdate", Convert.ToDateTime(txt_birthdate.Text).Date);
                 cmd.Parameters.Add("mobile", txt_mobile.Text);
                 cmd.Parameters.Add("address", txt_address.Text);
                 cmd.Parameters.Add("email", txt_email.Text);
@@ -178,6 +170,13 @@ namespace CMS_DB_Project
             btn_cancel.Visible = false;
 
             volunteerListView.Enabled = true;
+
+            hideTextboxes();
+            if (volunteerListView.Items.Count > 0)
+            {
+                volunteerListView.Items[lastItemSelected].Selected = true;
+                volunteerListView.Select();
+            }
         }
 
         public void updateListView()
@@ -204,10 +203,23 @@ namespace CMS_DB_Project
             dr.Dispose();
         }
 
+        public void fillTextBoxes()
+        {
+            if (volunteerListView.SelectedItems.Count != 0)
+            {
+                txt_email.Text = volunteerListView.SelectedItems[0].SubItems[0].Text;
+                txt_fname.Text = volunteerListView.SelectedItems[0].SubItems[1].Text;
+                txt_lname.Text = volunteerListView.SelectedItems[0].SubItems[2].Text;
+                txt_birthdate.Text = volunteerListView.SelectedItems[0].SubItems[3].Text;
+                txt_mobile.Text = volunteerListView.SelectedItems[0].SubItems[4].Text;
+                txt_address.Text = volunteerListView.SelectedItems[0].SubItems[5].Text;
+                txt_age.Text = (DateTime.Now.Year - Convert.ToDateTime(txt_birthdate.Text).Year).ToString() + " Years";
+                lastItemSelected = volunteerListView.SelectedItems[0].Index;
+            }
+        }
+
         private void btn_cancel_Click(object sender, EventArgs e)
         {
-            hideTextboxes();
-
             updateListView();
 
             btn_add.Visible = true;
@@ -217,13 +229,20 @@ namespace CMS_DB_Project
             btn_cancel.Visible = false;
 
             volunteerListView.Enabled = true;
+
+            hideTextboxes();
+            if (volunteerListView.Items.Count > 0)
+            {
+                volunteerListView.Items[lastItemSelected].Selected = true;
+                volunteerListView.Select();
+            }
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
             if (volunteerListView.SelectedItems.Count != 0)
             {
-                DialogResult res = MessageBox.Show("Delete this record?", "Delete Record", 
+                DialogResult res = MessageBox.Show("Delete this record?", "Delete Record",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (res == DialogResult.Yes)
                 {
@@ -235,10 +254,15 @@ namespace CMS_DB_Project
                     cmd.ExecuteNonQuery();
 
                     updateListView();
+                    if (volunteerListView.Items.Count > 0)
+                    {
+                        volunteerListView.Items[0].Selected = true;
+                        volunteerListView.Select();
+                    }
                 }
             }
             else
-                MessageBox.Show("Please select the record you want to delete from list.", "Select Record", 
+                MessageBox.Show("Please select the record you want to delete from list.", "Select Record",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

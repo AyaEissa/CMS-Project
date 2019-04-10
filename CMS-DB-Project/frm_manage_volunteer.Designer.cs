@@ -43,13 +43,11 @@
             this.lbl_lname = new System.Windows.Forms.Label();
             this.lbl_fname = new System.Windows.Forms.Label();
             this.lbl_email = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.volunteerListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -57,9 +55,11 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.volunteerGroupBox.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // volunteerGroupBox
@@ -78,9 +78,10 @@
             this.volunteerGroupBox.Controls.Add(this.lbl_lname);
             this.volunteerGroupBox.Controls.Add(this.lbl_fname);
             this.volunteerGroupBox.Controls.Add(this.lbl_email);
-            this.volunteerGroupBox.Location = new System.Drawing.Point(0, 0);
+            this.volunteerGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.volunteerGroupBox.Location = new System.Drawing.Point(3, 3);
             this.volunteerGroupBox.Name = "volunteerGroupBox";
-            this.volunteerGroupBox.Size = new System.Drawing.Size(591, 160);
+            this.volunteerGroupBox.Size = new System.Drawing.Size(585, 173);
             this.volunteerGroupBox.TabIndex = 0;
             this.volunteerGroupBox.TabStop = false;
             this.volunteerGroupBox.Text = "Volunteer Information";
@@ -232,24 +233,10 @@
             this.lbl_email.TabIndex = 3;
             this.lbl_email.Text = "Email:";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btn_save);
-            this.panel1.Controls.Add(this.btn_cancel);
-            this.panel1.Controls.Add(this.btn_delete);
-            this.panel1.Controls.Add(this.btn_edit);
-            this.panel1.Controls.Add(this.btn_add);
-            this.panel1.Controls.Add(this.volunteerGroupBox);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(591, 208);
-            this.panel1.TabIndex = 1;
-            // 
             // btn_save
             // 
             this.btn_save.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.Location = new System.Drawing.Point(445, 166);
+            this.btn_save.Location = new System.Drawing.Point(447, 3);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(64, 32);
             this.btn_save.TabIndex = 25;
@@ -261,7 +248,7 @@
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(515, 166);
+            this.btn_cancel.Location = new System.Drawing.Point(517, 3);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(64, 32);
             this.btn_cancel.TabIndex = 26;
@@ -273,7 +260,7 @@
             // btn_delete
             // 
             this.btn_delete.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Location = new System.Drawing.Point(155, 166);
+            this.btn_delete.Location = new System.Drawing.Point(143, 3);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(64, 32);
             this.btn_delete.TabIndex = 24;
@@ -284,7 +271,7 @@
             // btn_edit
             // 
             this.btn_edit.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit.Location = new System.Drawing.Point(85, 166);
+            this.btn_edit.Location = new System.Drawing.Point(73, 3);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(64, 32);
             this.btn_edit.TabIndex = 23;
@@ -295,22 +282,13 @@
             // btn_add
             // 
             this.btn_add.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(15, 166);
+            this.btn_add.Location = new System.Drawing.Point(3, 3);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(64, 32);
             this.btn_add.TabIndex = 22;
             this.btn_add.Text = "Add";
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.volunteerListView);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 208);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(591, 240);
-            this.panel2.TabIndex = 2;
             // 
             // volunteerListView
             // 
@@ -323,10 +301,10 @@
             this.columnHeader6});
             this.volunteerListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.volunteerListView.FullRowSelect = true;
-            this.volunteerListView.Location = new System.Drawing.Point(0, 0);
+            this.volunteerListView.Location = new System.Drawing.Point(3, 226);
             this.volunteerListView.MultiSelect = false;
             this.volunteerListView.Name = "volunteerListView";
-            this.volunteerListView.Size = new System.Drawing.Size(591, 240);
+            this.volunteerListView.Size = new System.Drawing.Size(585, 219);
             this.volunteerListView.TabIndex = 0;
             this.volunteerListView.UseCompatibleStateImageBehavior = false;
             this.volunteerListView.View = System.Windows.Forms.View.Details;
@@ -362,23 +340,60 @@
             this.columnHeader6.Text = "Address";
             this.columnHeader6.Width = 120;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.volunteerListView, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.volunteerGroupBox, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(591, 448);
+            this.tableLayoutPanel1.TabIndex = 27;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 7;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel2.Controls.Add(this.btn_cancel, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_add, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_edit, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_delete, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_save, 5, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 182);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(585, 38);
+            this.tableLayoutPanel2.TabIndex = 1;
+            // 
             // frm_manage_volunteer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 448);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frm_manage_volunteer";
             this.Text = "Volunteers";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_manage_volunteer_FormClosed);
             this.Load += new System.EventHandler(this.frm_manage_volunteer_Load);
             this.volunteerGroupBox.ResumeLayout(false);
             this.volunteerGroupBox.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -386,8 +401,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox volunteerGroupBox;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txt_age;
         private System.Windows.Forms.TextBox txt_address;
         private System.Windows.Forms.TextBox txt_mobile;
@@ -414,5 +427,7 @@
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_edit;
         private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }

@@ -31,13 +31,16 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.volunteerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageVolunteerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.branchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeesWorksForBranchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.volunteerToolStripMenuItem});
+            this.volunteerToolStripMenuItem,
+            this.branchToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(605, 24);
@@ -58,6 +61,21 @@
             this.manageVolunteerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.manageVolunteerToolStripMenuItem.Text = "Manage";
             this.manageVolunteerToolStripMenuItem.Click += new System.EventHandler(this.manageVolunteerToolStripMenuItem_Click);
+            // 
+            // branchToolStripMenuItem
+            // 
+            this.branchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.employeesWorksForBranchToolStripMenuItem});
+            this.branchToolStripMenuItem.Name = "branchToolStripMenuItem";
+            this.branchToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.branchToolStripMenuItem.Text = "Branch";
+            // 
+            // employeesWorksForBranchToolStripMenuItem
+            // 
+            this.employeesWorksForBranchToolStripMenuItem.Name = "employeesWorksForBranchToolStripMenuItem";
+            this.employeesWorksForBranchToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.employeesWorksForBranchToolStripMenuItem.Text = "Employees works for branch (Master-Detail)";
+            this.employeesWorksForBranchToolStripMenuItem.Click += new System.EventHandler(this.employeesWorksForBranchToolStripMenuItem_Click);
             // 
             // frm_main
             // 
@@ -83,5 +101,7 @@
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem volunteerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageVolunteerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem branchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem employeesWorksForBranchToolStripMenuItem;
     }
 }
