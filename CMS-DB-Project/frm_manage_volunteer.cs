@@ -17,29 +17,36 @@ namespace CMS_DB_Project
         string ordb = "Data source = orcl; User id = scott; Password = tiger;";
         OracleConnection con;
         OracleCommand cmd;
-        int chooseFlag = -1;
-        int lastItemSelected = -1;
+        int chooseFlag = -1; //Indicates user choose Add or Edit
+        int lastItemSelected = -1; //Last item selected in list view
 
         public frm_manage_volunteer()
         {
             InitializeComponent();
         }
 
-        public void showTextboxes()
+        /// <summary>
+        /// Make volunteer information test boxes editable.
+        /// </summary>
+        /// <param name="isAdd">Indicates show text boxes in Add or Edit mode</param>
+        public void showTextboxes(bool isAdd)
         {
-            txt_email.BackColor = Color.White;
+            if (isAdd)
+                txt_email.BackColor = Color.White;
             txt_fname.BackColor = Color.White;
             txt_lname.BackColor = Color.White;
             txt_birthdate.BackColor = Color.White;
             txt_mobile.BackColor = Color.White;
             txt_address.BackColor = Color.White;
-            txt_email.BorderStyle = BorderStyle.FixedSingle;
+            if (isAdd)
+                txt_email.BorderStyle = BorderStyle.FixedSingle;
             txt_fname.BorderStyle = BorderStyle.FixedSingle;
             txt_lname.BorderStyle = BorderStyle.FixedSingle;
             txt_birthdate.BorderStyle = BorderStyle.FixedSingle;
             txt_mobile.BorderStyle = BorderStyle.FixedSingle;
             txt_address.BorderStyle = BorderStyle.FixedSingle;
-            txt_email.ReadOnly = false;
+            if (isAdd)
+                txt_email.ReadOnly = false;
             txt_fname.ReadOnly = false;
             txt_lname.ReadOnly = false;
             txt_birthdate.ReadOnly = false;
@@ -47,6 +54,9 @@ namespace CMS_DB_Project
             txt_address.ReadOnly = false;
         }
 
+        /// <summary>
+        /// Make volunteer information test boxes read-only.
+        /// </summary>
         public void hideTextboxes()
         {
             txt_email.BackColor = SystemColors.Control;
@@ -72,7 +82,7 @@ namespace CMS_DB_Project
         private void btn_add_Click(object sender, EventArgs e)
         {
             chooseFlag = 1;
-            showTextboxes();
+            showTextboxes(true);
             txt_email.Text = "";
             txt_fname.Text = "";
             txt_lname.Text = "";
@@ -99,10 +109,7 @@ namespace CMS_DB_Project
         private void btn_edit_Click(object sender, EventArgs e)
         {
             chooseFlag = 2;
-            showTextboxes();
-            txt_email.BackColor = SystemColors.Control;
-            txt_email.BorderStyle = BorderStyle.None;
-            txt_email.ReadOnly = true;
+            showTextboxes(false);
             txt_fname.Focus();
 
             btn_add.Visible = false;
@@ -179,6 +186,9 @@ namespace CMS_DB_Project
             }
         }
 
+        /// <summary>
+        /// Open connection with Oracle and fill the list view.
+        /// </summary>
         public void updateListView()
         {
             volunteerListView.Items.Clear();
@@ -203,6 +213,9 @@ namespace CMS_DB_Project
             dr.Dispose();
         }
 
+        /// <summary>
+        /// Fill volunteer text boxes with selected item in list view.
+        /// </summary>
         public void fillTextBoxes()
         {
             if (volunteerListView.SelectedItems.Count != 0)

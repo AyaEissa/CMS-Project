@@ -95,7 +95,7 @@
             this.txt_birthdate.Name = "txt_birthdate";
             this.txt_birthdate.ReadOnly = true;
             this.txt_birthdate.Size = new System.Drawing.Size(138, 16);
-            this.txt_birthdate.TabIndex = 22;
+            this.txt_birthdate.TabIndex = 13;
             // 
             // txt_age
             // 
