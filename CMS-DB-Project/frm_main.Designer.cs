@@ -33,6 +33,9 @@
             this.manageVolunteerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.branchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeesWorksForBranchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.donorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.donationsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,7 +43,9 @@
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.volunteerToolStripMenuItem,
-            this.branchToolStripMenuItem});
+            this.branchToolStripMenuItem,
+            this.donorToolStripMenuItem,
+            this.reportsToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(605, 24);
@@ -58,7 +63,7 @@
             // manageVolunteerToolStripMenuItem
             // 
             this.manageVolunteerToolStripMenuItem.Name = "manageVolunteerToolStripMenuItem";
-            this.manageVolunteerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.manageVolunteerToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.manageVolunteerToolStripMenuItem.Text = "Manage";
             this.manageVolunteerToolStripMenuItem.Click += new System.EventHandler(this.manageVolunteerToolStripMenuItem_Click);
             // 
@@ -76,6 +81,28 @@
             this.employeesWorksForBranchToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
             this.employeesWorksForBranchToolStripMenuItem.Text = "Employees works for branch (Master-Detail)";
             this.employeesWorksForBranchToolStripMenuItem.Click += new System.EventHandler(this.employeesWorksForBranchToolStripMenuItem_Click);
+            // 
+            // donorToolStripMenuItem
+            // 
+            this.donorToolStripMenuItem.Name = "donorToolStripMenuItem";
+            this.donorToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.donorToolStripMenuItem.Text = "Donor";
+            this.donorToolStripMenuItem.Click += new System.EventHandler(this.donorToolStripMenuItem_Click);
+            // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.donationsReportToolStripMenuItem});
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            // 
+            // donationsReportToolStripMenuItem
+            // 
+            this.donationsReportToolStripMenuItem.Name = "donationsReportToolStripMenuItem";
+            this.donationsReportToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.donationsReportToolStripMenuItem.Text = "Donations Report";
+            this.donationsReportToolStripMenuItem.Click += new System.EventHandler(this.donationsReportToolStripMenuItem_Click);
             // 
             // frm_main
             // 
@@ -103,5 +130,8 @@
         private System.Windows.Forms.ToolStripMenuItem manageVolunteerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem branchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem employeesWorksForBranchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem donorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem donationsReportToolStripMenuItem;
     }
 }

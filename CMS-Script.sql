@@ -81,7 +81,39 @@ CREATE TABLE BranchPhones
 MOBILENUMBER VARCHAR2(13) NOT NULL, 
 CONSTRAINTS pkBranchPhones PRIMARY KEY (BID, MOBILENUMBER));
 
+create or replace PROCEDURE Delete_Donations(D_Email varchar2)
+as
+begin
+ delete DONATESFOR
+ where donoremail = D_Email;
+END;
 
+create or replace procedure Delete_Donor
+  (D_Email VARCHAR2)
+as
+begin
+	DELETE DONOR
+  WHERE EMAIL = D_Email;
+end;
+
+create or replace procedure Insert_Donor(D_Email VARCHAR2, D_FName VARCHAR2,D_LName VARCHAR2,
+                       D_MobileNum VARCHAR2, D_Address VARCHAR2)
+as
+begin
+insert  into  donor
+Values ( D_email, D_fname, D_lname, D_mobilenum, D_address) ;
+End ;
+
+create or replace procedure Update_Donor
+  (D_Email VARCHAR2, D_FName VARCHAR2,D_LName VARCHAR2,
+   D_MobileNum VARCHAR2, D_Address VARCHAR2)
+as
+begin
+	update donor 
+	set   fname = D_Fname, lname = D_Lname, mobilenumber = D_Mobilenum,
+        address = D_Address
+	where   email = D_Email;
+end;
 
 INSERT INTO Branch VALUES (1, '4 Zaki Rostom St. - Nasr City - Cairo');
 INSERT INTO Branch VALUES (2, '11 Ahmed Abd ElKhaleq St. - Masr El Gedida - Cairo');

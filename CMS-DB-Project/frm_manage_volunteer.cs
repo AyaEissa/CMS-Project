@@ -14,7 +14,7 @@ namespace CMS_DB_Project
 {
     public partial class frm_manage_volunteer : Form
     {
-        string ordb = "Data source = orcl; User id = scott; Password = tiger;";
+        string ordb = "Data source = orcl; User id = hr; Password = hr;";
         OracleConnection con;
         OracleCommand cmd;
         int chooseFlag = -1; //Indicates user choose Add or Edit
