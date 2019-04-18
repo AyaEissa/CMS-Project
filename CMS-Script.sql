@@ -81,8 +81,6 @@ CREATE TABLE BranchPhones
 MOBILENUMBER VARCHAR2(13) NOT NULL, 
 CONSTRAINTS pkBranchPhones PRIMARY KEY (BID, MOBILENUMBER));
 
-
-
 INSERT INTO Branch VALUES (1, '4 Zaki Rostom St. - Nasr City - Cairo');
 INSERT INTO Branch VALUES (2, '11 Ahmed Abd ElKhaleq St. - Masr El Gedida - Cairo');
 INSERT INTO Branch VALUES (3, '16a Youssef Zaki St. - Helwan - Cairo');
