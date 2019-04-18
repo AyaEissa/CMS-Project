@@ -16,7 +16,7 @@ namespace CMS_DB_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(); //In Run() function type "new yourFormName()" to run it first
+            Application.Run(new frm_main()); //In Run() function type "new yourFormName()" to run it first
         }
     }
 }

@@ -48,8 +48,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_employeesworksforbranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_employeesworksforbranch.Designer.cs">
+      <DependentUpon>frm_employeesworksforbranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_main.Designer.cs">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_manage_volunteer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_manage_volunteer.Designer.cs">
+      <DependentUpon>frm_manage_volunteer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_employeesworksforbranch.resx">
+      <DependentUpon>frm_employeesworksforbranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_main.resx">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_manage_volunteer.resx">
+      <DependentUpon>frm_manage_volunteer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
