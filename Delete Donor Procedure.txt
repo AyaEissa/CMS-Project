@@ -1,0 +1,8 @@
+create or replace procedure Delete_Donor
+  (D_Email VARCHAR2)
+as
+begin
+	DELETE DONOR
+  WHERE EMAIL = D_Email;
+end;
+

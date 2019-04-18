@@ -30,5 +30,19 @@ namespace CMS_DB_Project
             empForBranch.MdiParent = this;
             empForBranch.Show();
         }
+
+        private void donorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_manage_donor donorForm = new frm_manage_donor();
+            donorForm.MdiParent = this;
+            donorForm.Show();
+        }
+
+        private void donationsReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_donations_report donationsReport = new frm_donations_report();
+            donationsReport.MdiParent = this;
+            donationsReport.Show();
+        }
     }
 }
