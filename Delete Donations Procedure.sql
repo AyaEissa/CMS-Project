@@ -1,0 +1,7 @@
+CREATE OR REPLACE PROCEDURE Delete_Donations(D_Email VARCHAR2)
+AS
+BEGIN
+ DELETE DONATESFOR
+ WHERE donoremail = D_Email;
+END;
+

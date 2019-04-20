@@ -1,8 +1,8 @@
-create or replace procedure Delete_Donor
+CREATE OR REPLACE PROCEDURE Delete_Donor
   (D_Email VARCHAR2)
-as
-begin
+AS
+BEGIN
 	DELETE DONOR
   WHERE EMAIL = D_Email;
-end;
+END;
 

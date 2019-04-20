@@ -1,7 +1,0 @@
-create or replace PROCEDURE Delete_Donations(D_Email varchar2)
-as
-begin
- delete DONATESFOR
- where donoremail = D_Email;
-END;
-
