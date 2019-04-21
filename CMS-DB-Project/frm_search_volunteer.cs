@@ -37,6 +37,9 @@ namespace CMS_DB_Project
         {
             volunteerListView.Items.Clear();
 
+            if (txt_search.Text == "")
+                return;
+
             cmd = new OracleCommand();
             cmd.Connection = con;
             cmd.CommandText = "SELECT * " +
@@ -51,15 +54,18 @@ namespace CMS_DB_Project
                 cmd.CommandText += "WHERE lower(Fname) like :search";
                 cmd.Parameters.Add("search", '%' + txt_search.Text.ToLower() + '%');
             }
-            else if (cmp_search.Text == "Last Name") {
+            else if (cmp_search.Text == "Last Name")
+            {
                 cmd.CommandText += "WHERE lower(Lname) like :search";
                 cmd.Parameters.Add("search", '%' + txt_search.Text.ToLower() + '%');
             }
-            else if (cmp_search.Text == "Mobile Number") {
+            else if (cmp_search.Text == "Mobile Number")
+            {
                 cmd.CommandText += "WHERE Mobilenumber like :search";
                 cmd.Parameters.Add("search", '%' + txt_search.Text + '%');
             }
-            else if (cmp_search.Text == "Address") {
+            else if (cmp_search.Text == "Address")
+            {
                 cmd.CommandText += "WHERE lower(Address) like :search";
                 cmd.Parameters.Add("search", '%' + txt_search.Text.ToLower() + '%');
             }
@@ -85,6 +91,7 @@ namespace CMS_DB_Project
             if (txt_search.Enabled == false)
                 txt_search.Enabled = true;
             txt_search.Text = "";
+            volunteerListView.Items.Clear();
             txt_search.Focus();
         }
     }
