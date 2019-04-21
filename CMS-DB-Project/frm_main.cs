@@ -44,5 +44,12 @@ namespace CMS_DB_Project
             donationsReport.MdiParent = this;
             donationsReport.Show();
         }
+
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_search_volunteer searchVolForm = new frm_search_volunteer();
+            searchVolForm.MdiParent = this;
+            searchVolForm.Show();
+        }
     }
 }

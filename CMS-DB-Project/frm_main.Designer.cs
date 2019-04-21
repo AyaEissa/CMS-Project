@@ -36,6 +36,7 @@
             this.donorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.donationsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +56,8 @@
             // volunteerToolStripMenuItem
             // 
             this.volunteerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manageVolunteerToolStripMenuItem});
+            this.manageVolunteerToolStripMenuItem,
+            this.searchToolStripMenuItem});
             this.volunteerToolStripMenuItem.Name = "volunteerToolStripMenuItem";
             this.volunteerToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.volunteerToolStripMenuItem.Text = "Volunteer";
@@ -63,7 +65,7 @@
             // manageVolunteerToolStripMenuItem
             // 
             this.manageVolunteerToolStripMenuItem.Name = "manageVolunteerToolStripMenuItem";
-            this.manageVolunteerToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.manageVolunteerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.manageVolunteerToolStripMenuItem.Text = "Manage";
             this.manageVolunteerToolStripMenuItem.Click += new System.EventHandler(this.manageVolunteerToolStripMenuItem_Click);
             // 
@@ -104,6 +106,13 @@
             this.donationsReportToolStripMenuItem.Text = "Donations Report";
             this.donationsReportToolStripMenuItem.Click += new System.EventHandler(this.donationsReportToolStripMenuItem_Click);
             // 
+            // searchToolStripMenuItem
+            // 
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.searchToolStripMenuItem.Text = "Search";
+            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
+            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,5 +142,6 @@
         private System.Windows.Forms.ToolStripMenuItem donorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem donationsReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
     }
 }
