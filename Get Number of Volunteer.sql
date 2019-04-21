@@ -1,0 +1,8 @@
+CREATE OR REPLACE PROCEDURE Get_Volunteer_Count
+  (V_Count OUT INTEGER)
+AS
+BEGIN
+	SELECT COUNT(*)
+  INTO V_Count
+  FROM Volunteer;
+END;

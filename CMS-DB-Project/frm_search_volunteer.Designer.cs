@@ -39,6 +39,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.cmp_search = new System.Windows.Forms.ComboBox();
+            this.chk_usingProcedure = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -53,8 +54,8 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(683, 436);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -69,11 +70,11 @@
             this.columnHeader6});
             this.volunteerListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.volunteerListView.FullRowSelect = true;
-            this.volunteerListView.Location = new System.Drawing.Point(3, 46);
+            this.volunteerListView.Location = new System.Drawing.Point(3, 43);
             this.volunteerListView.MultiSelect = false;
             this.volunteerListView.Name = "volunteerListView";
-            this.volunteerListView.Size = new System.Drawing.Size(677, 387);
-            this.volunteerListView.TabIndex = 3;
+            this.volunteerListView.Size = new System.Drawing.Size(677, 390);
+            this.volunteerListView.TabIndex = 4;
             this.volunteerListView.UseCompatibleStateImageBehavior = false;
             this.volunteerListView.View = System.Windows.Forms.View.Details;
             // 
@@ -109,17 +110,19 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.txt_search, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cmp_search, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.chk_usingProcedure, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(677, 37);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(677, 34);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // txt_search
@@ -127,12 +130,11 @@
             this.txt_search.BackColor = System.Drawing.Color.White;
             this.txt_search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_search.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_search.Enabled = false;
             this.txt_search.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_search.Location = new System.Drawing.Point(3, 3);
             this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(471, 27);
-            this.txt_search.TabIndex = 2;
+            this.txt_search.Size = new System.Drawing.Size(451, 27);
+            this.txt_search.TabIndex = 1;
             this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
             // 
             // cmp_search
@@ -148,11 +150,23 @@
             "Last Name",
             "Mobile Number",
             "Address"});
-            this.cmp_search.Location = new System.Drawing.Point(480, 3);
+            this.cmp_search.Location = new System.Drawing.Point(460, 3);
             this.cmp_search.Name = "cmp_search";
             this.cmp_search.Size = new System.Drawing.Size(194, 29);
-            this.cmp_search.TabIndex = 1;
+            this.cmp_search.TabIndex = 2;
             this.cmp_search.SelectedIndexChanged += new System.EventHandler(this.cmp_search_SelectedIndexChanged);
+            // 
+            // chk_usingProcedure
+            // 
+            this.chk_usingProcedure.AutoSize = true;
+            this.chk_usingProcedure.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chk_usingProcedure.Location = new System.Drawing.Point(660, 3);
+            this.chk_usingProcedure.Name = "chk_usingProcedure";
+            this.chk_usingProcedure.Size = new System.Drawing.Size(14, 28);
+            this.chk_usingProcedure.TabIndex = 3;
+            this.chk_usingProcedure.Text = "Using Procedure";
+            this.chk_usingProcedure.UseVisualStyleBackColor = true;
+            this.chk_usingProcedure.CheckedChanged += new System.EventHandler(this.chk_usingProcedure_CheckedChanged);
             // 
             // frm_search_volunteer
             // 
@@ -184,5 +198,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.ComboBox cmp_search;
+        private System.Windows.Forms.CheckBox chk_usingProcedure;
     }
 }
