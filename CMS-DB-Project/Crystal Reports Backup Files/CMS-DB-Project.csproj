@@ -56,18 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Change Employee Info.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Change Employee Info.Designer.cs">
-      <DependentUpon>Change Employee Info.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Employeeform.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Employeeform.Designer.cs">
-      <DependentUpon>Employeeform.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_donations_report.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,12 +94,6 @@
       <DependentUpon>rep1_donations.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="Change Employee Info.resx">
-      <DependentUpon>Change Employee Info.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Employeeform.resx">
-      <DependentUpon>Employeeform.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_donations_report.resx">
       <DependentUpon>frm_donations_report.cs</DependentUpon>
     </EmbeddedResource>

@@ -44,5 +44,19 @@ namespace CMS_DB_Project
             donationsReport.MdiParent = this;
             donationsReport.Show();
         }
+
+        private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Employeeform Employee = new Employeeform();
+            Employee.MdiParent = this;
+            Employee.Show();
+        }
+
+        private void changeEmployeeInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Change_Employee_Info change = new Change_Employee_Info();
+            change.MdiParent = this;
+            change.Show();
+        }
     }
 }
