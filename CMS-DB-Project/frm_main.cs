@@ -80,7 +80,14 @@ namespace CMS_DB_Project
         }
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_search_volunteer searchVolForm = new frm_search_volunteer();
+            frm_search_volunteer_connected searchVolForm = new frm_search_volunteer_connected();
+            searchVolForm.MdiParent = this;
+            searchVolForm.Show();
+        }
+
+        private void searchDisconnectedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_search_volunteer_disconnected searchVolForm = new frm_search_volunteer_disconnected();
             searchVolForm.MdiParent = this;
             searchVolForm.Show();
         }

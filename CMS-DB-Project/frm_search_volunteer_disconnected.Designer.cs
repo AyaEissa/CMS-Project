@@ -1,6 +1,6 @@
 ﻿namespace CMS_DB_Project
 {
-    partial class frm_search_volunteer
+    partial class frm_search_volunteer_disconnected
     {
         /// <summary>
         /// Required designer variable.
@@ -29,27 +29,21 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.volunteerListView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.cmp_search = new System.Windows.Forms.ComboBox();
-            this.chk_usingProcedure = new System.Windows.Forms.CheckBox();
+            this.volunteerDataGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.volunteerDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.volunteerListView, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.volunteerDataGridView, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -59,64 +53,13 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(683, 436);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // volunteerListView
-            // 
-            this.volunteerListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
-            this.volunteerListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.volunteerListView.FullRowSelect = true;
-            this.volunteerListView.Location = new System.Drawing.Point(3, 43);
-            this.volunteerListView.MultiSelect = false;
-            this.volunteerListView.Name = "volunteerListView";
-            this.volunteerListView.Size = new System.Drawing.Size(677, 390);
-            this.volunteerListView.TabIndex = 4;
-            this.volunteerListView.UseCompatibleStateImageBehavior = false;
-            this.volunteerListView.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Email";
-            this.columnHeader1.Width = 120;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "First Name";
-            this.columnHeader2.Width = 80;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Last Name";
-            this.columnHeader3.Width = 80;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Bithdate";
-            this.columnHeader4.Width = 80;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Mobile Number";
-            this.columnHeader5.Width = 80;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Address";
-            this.columnHeader6.Width = 120;
-            // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.txt_search, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cmp_search, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.chk_usingProcedure, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -133,7 +76,7 @@
             this.txt_search.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_search.Location = new System.Drawing.Point(3, 3);
             this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(451, 27);
+            this.txt_search.Size = new System.Drawing.Size(471, 27);
             this.txt_search.TabIndex = 1;
             this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
             // 
@@ -150,37 +93,44 @@
             "Last Name",
             "Mobile Number",
             "Address"});
-            this.cmp_search.Location = new System.Drawing.Point(460, 3);
+            this.cmp_search.Location = new System.Drawing.Point(480, 3);
             this.cmp_search.Name = "cmp_search";
             this.cmp_search.Size = new System.Drawing.Size(194, 29);
             this.cmp_search.TabIndex = 2;
             this.cmp_search.SelectedIndexChanged += new System.EventHandler(this.cmp_search_SelectedIndexChanged);
             // 
-            // chk_usingProcedure
+            // volunteerDataGridView
             // 
-            this.chk_usingProcedure.AutoSize = true;
-            this.chk_usingProcedure.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chk_usingProcedure.Location = new System.Drawing.Point(660, 3);
-            this.chk_usingProcedure.Name = "chk_usingProcedure";
-            this.chk_usingProcedure.Size = new System.Drawing.Size(14, 28);
-            this.chk_usingProcedure.TabIndex = 3;
-            this.chk_usingProcedure.Text = "Using Procedure";
-            this.chk_usingProcedure.UseVisualStyleBackColor = true;
-            this.chk_usingProcedure.CheckedChanged += new System.EventHandler(this.chk_usingProcedure_CheckedChanged);
+            this.volunteerDataGridView.AllowUserToAddRows = false;
+            this.volunteerDataGridView.AllowUserToDeleteRows = false;
+            this.volunteerDataGridView.AllowUserToResizeColumns = false;
+            this.volunteerDataGridView.AllowUserToResizeRows = false;
+            this.volunteerDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.volunteerDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.volunteerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.volunteerDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.volunteerDataGridView.Location = new System.Drawing.Point(3, 43);
+            this.volunteerDataGridView.MultiSelect = false;
+            this.volunteerDataGridView.Name = "volunteerDataGridView";
+            this.volunteerDataGridView.ReadOnly = true;
+            this.volunteerDataGridView.RowHeadersVisible = false;
+            this.volunteerDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.volunteerDataGridView.Size = new System.Drawing.Size(677, 390);
+            this.volunteerDataGridView.TabIndex = 3;
             // 
-            // frm_search_volunteer
+            // frm_search_volunteer_disconnected
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(683, 436);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "frm_search_volunteer";
-            this.Text = "Search for Volunteer";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_search_volunteer_FormClosed);
+            this.Name = "frm_search_volunteer_disconnected";
+            this.Text = "Search for Volunteer (Disconnected)";
             this.Load += new System.EventHandler(this.frm_search_volunteer_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.volunteerDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -188,16 +138,9 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ListView volunteerListView;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.ComboBox cmp_search;
-        private System.Windows.Forms.CheckBox chk_usingProcedure;
+        private System.Windows.Forms.DataGridView volunteerDataGridView;
     }
 }
