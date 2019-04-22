@@ -119,7 +119,7 @@ INSERT INTO Manages VALUES (1, 'We hope for them', '5-Apr-2019');
 INSERT INTO Manages VALUES (2, 'The beginning of life', '1-Apr-2019');
 INSERT INTO Manages VALUES (2, 'Al-Duha convoy', '29-Mar-2019');
 INSERT INTO DonatesFor VALUES ('polamikhail@gmail.com', 'We hope for them', '5-Apr-2019', 1234567890, '10-Mar-2019', 'Money', 3000);
-INSERT INTO DonatesFor VALUES ('youmnamohamed@hotmail.com', 'We hope for them', '5-Apr-2019', 9876543210, '15-Mar-2019', 'Clothes', 5);
+INSERT INTO DonatesFor VALUES ('youmnamohamed@hotmail.com', 'We hope for them', '5-Apr-2019', 9876543210, '15-Mar-2019', 'Money', 10000);
 INSERT INTO DonatesFor VALUES ('tonynasr@gmail.com', 'Al-Duha convoy', '29-Mar-2019', 4567891230, '20-Feb-2019', 'Money', 5000);
 
 COMMIT;
