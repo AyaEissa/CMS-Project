@@ -14,7 +14,7 @@ namespace CMS_DB_Project
 {
     public partial class frm_search_volunteer : Form
     {
-        string ordb = "Data source = orcl; User id = scott; Password = tiger;";
+        string ordb = "Data source = orcl; User id = hr; Password = hr;";
         OracleConnection con;
         OracleCommand cmd;
         public frm_search_volunteer()

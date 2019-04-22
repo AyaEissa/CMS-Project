@@ -14,7 +14,7 @@ namespace CMS_DB_Project
 {
     public partial class frm_employeesworksforbranch : Form
     {
-        string ordb = "Data source = orcl; User id = scott; Password = tiger;";
+        string ordb = "Data source = orcl; User id = hr; Password = hr;";
         OracleDataAdapter adp;
         DataSet ds;
 
