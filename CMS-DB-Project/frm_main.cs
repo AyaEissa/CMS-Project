@@ -91,5 +91,12 @@ namespace CMS_DB_Project
             searchVolForm.MdiParent = this;
             searchVolForm.Show();
         }
+
+        private void campaginReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CampaginRep_form camp = new CampaginRep_form();
+            camp.MdiParent = this;
+            camp.Show();
+        }
     }
 }

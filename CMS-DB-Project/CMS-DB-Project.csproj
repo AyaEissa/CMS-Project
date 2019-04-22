@@ -56,6 +56,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CampaginReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CampaginReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CampaginRep_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CampaginRep_form.Designer.cs">
+      <DependentUpon>CampaginRep_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="CampainReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +148,13 @@
       <DependentUpon>TotalnumberofVolunteers.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="CampaginReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CampaginReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CampaginRep_form.resx">
+      <DependentUpon>CampaginRep_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CampainReport.resx">
       <DependentUpon>CampainReport.cs</DependentUpon>
     </EmbeddedResource>
