@@ -35,3 +35,5 @@ C:\Users\Aya\Documents\GitHub\aya\CMS-Project\CMS-DB-Project\obj\Debug\CMS-DB-Pr
 C:\Users\Aya\Documents\GitHub\aya\CMS-Project\CMS-DB-Project\obj\Debug\CMS-DB-Project.pdb
 C:\Users\Aya\Documents\GitHub\aya\CMS-Project\CMS-DB-Project\obj\Debug\CMS_DB_Project.Employeeform.resources
 C:\Users\Aya\Documents\GitHub\aya\CMS-Project\CMS-DB-Project\obj\Debug\CMS_DB_Project.Change_Employee_Info.resources
+C:\Users\Aya\Documents\GitHub\aya\CMS-Project\CMS-DB-Project\obj\Debug\CMS_DB_Project.CampainReport.resources
+C:\Users\Aya\Documents\GitHub\aya\CMS-Project\CMS-DB-Project\obj\Debug\CMS_DB_Project.Employee_Bramch.resources

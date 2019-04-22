@@ -34,10 +34,10 @@
             this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SSN = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MOBILENUMBER = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ADDRESS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,7 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // fname
             // 
@@ -84,6 +85,15 @@
             this.MOBILENUMBER.Text = "MOBILENUMBER";
             this.MOBILENUMBER.Width = 153;
             // 
+            // BID
+            // 
+            this.BID.Text = "BID";
+            this.BID.Width = 86;
+            // 
+            // ADDRESS
+            // 
+            this.ADDRESS.Text = "ADDRESS";
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(621, 383);
@@ -102,15 +112,6 @@
             this.groupBox1.Size = new System.Drawing.Size(800, 360);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            // 
-            // BID
-            // 
-            this.BID.Text = "BID";
-            this.BID.Width = 86;
-            // 
-            // ADDRESS
-            // 
-            this.ADDRESS.Text = "ADDRESS";
             // 
             // Employeeform
             // 

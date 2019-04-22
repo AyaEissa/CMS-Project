@@ -36,8 +36,10 @@
             this.donorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.donationsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeeReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeEmployeeInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeeReportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,13 +52,15 @@
             this.donorToolStripMenuItem,
             this.reportsToolStripMenuItem,
             this.employeeToolStripMenuItem,
-            this.changeEmployeeInfoToolStripMenuItem});
+            this.changeEmployeeInfoToolStripMenuItem,
+            this.employeeReportToolStripMenuItem1});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.menuStrip.Size = new System.Drawing.Size(807, 28);
             this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "Menu Strip";
+            this.menuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip_ItemClicked);
             // 
             // volunteerToolStripMenuItem
             // 
@@ -98,10 +102,12 @@
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.donationsReportToolStripMenuItem});
+            this.donationsReportToolStripMenuItem,
+            this.employeeReportToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.reportsToolStripMenuItem.Text = "Reports";
+            this.reportsToolStripMenuItem.Click += new System.EventHandler(this.reportsToolStripMenuItem_Click);
             // 
             // donationsReportToolStripMenuItem
             // 
@@ -109,6 +115,13 @@
             this.donationsReportToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
             this.donationsReportToolStripMenuItem.Text = "Donations Report";
             this.donationsReportToolStripMenuItem.Click += new System.EventHandler(this.donationsReportToolStripMenuItem_Click);
+            // 
+            // employeeReportToolStripMenuItem
+            // 
+            this.employeeReportToolStripMenuItem.Name = "employeeReportToolStripMenuItem";
+            this.employeeReportToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.employeeReportToolStripMenuItem.Text = "Employee_Report";
+            this.employeeReportToolStripMenuItem.Click += new System.EventHandler(this.employeeReportToolStripMenuItem_Click);
             // 
             // employeeToolStripMenuItem
             // 
@@ -124,6 +137,13 @@
             this.changeEmployeeInfoToolStripMenuItem.Text = "Change Employee Info";
             this.changeEmployeeInfoToolStripMenuItem.Click += new System.EventHandler(this.changeEmployeeInfoToolStripMenuItem_Click);
             // 
+            // employeeReportToolStripMenuItem1
+            // 
+            this.employeeReportToolStripMenuItem1.Name = "employeeReportToolStripMenuItem1";
+            this.employeeReportToolStripMenuItem1.Size = new System.Drawing.Size(136, 24);
+            this.employeeReportToolStripMenuItem1.Text = "Employee Branch";
+            this.employeeReportToolStripMenuItem1.Click += new System.EventHandler(this.employeeReportToolStripMenuItem1_Click);
+            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -132,7 +152,7 @@
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
@@ -156,5 +176,7 @@
         private System.Windows.Forms.ToolStripMenuItem donationsReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem employeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changeEmployeeInfoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem employeeReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem employeeReportToolStripMenuItem1;
     }
 }

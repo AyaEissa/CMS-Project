@@ -48,5 +48,10 @@ namespace CMS_DB_Project
                 listView1.Items.Add(item);
             }
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

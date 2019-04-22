@@ -58,5 +58,30 @@ namespace CMS_DB_Project
             change.MdiParent = this;
             change.Show();
         }
+
+        private void employeeReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CampainReport cm = new CampainReport();
+            cm.MdiParent = this;
+            cm.Show();
+
+        }
+
+        private void employeeReportToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Employee_Bramch cm = new Employee_Bramch();
+            cm.MdiParent = this;
+            cm.Show();
+        }
+
+        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

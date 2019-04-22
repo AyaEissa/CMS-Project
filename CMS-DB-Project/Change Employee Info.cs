@@ -45,8 +45,10 @@ namespace CMS_DB_Project
         private void button2_Click(object sender, EventArgs e)
         {
             OracleCommandBuilder builder = new OracleCommandBuilder(adapter);
+           
             adapter.Update(ds.Tables[0]);
             
+
 
 
             MessageBox.Show("Data Updated !");

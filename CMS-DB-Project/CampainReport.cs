@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CMS_DB_Project
 {
-    public partial class frm_donations_report : Form
+    public partial class CampainReport : Form
     {
-        public frm_donations_report()
+        public CampainReport()
         {
             InitializeComponent();
-        }
-
-        private void crystalReportViewer1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
