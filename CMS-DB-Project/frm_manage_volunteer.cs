@@ -14,7 +14,7 @@ namespace CMS_DB_Project
 {
     public partial class frm_manage_volunteer : Form
     {
-        string ordb = "Data source = orcl; User id = scott; Password = tiger;";
+        string ordb = "Data source = orcl; User id = hr; Password = hr;";
         OracleConnection con;
         OracleCommand cmd;
         int chooseFlag = -1; //Indicates user choose Add or Edit
@@ -212,6 +212,16 @@ namespace CMS_DB_Project
             volunteerListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
             dr.Dispose();
+
+            cmd = new OracleCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "Get_Volunteer_Count";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("count", OracleDbType.Int32, ParameterDirection.Output);
+
+            cmd.ExecuteNonQuery();
+
+            lbl_status.Text = "Number of Volunteer: " + cmd.Parameters["count"].Value.ToString();
         }
 
         /// <summary>

@@ -30,23 +30,25 @@ namespace CMS_DB_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            listView1.Items.Clear();
+
             OracleCommand cmd = new OracleCommand(ordb);
-            //OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
             cmd.CommandText = "Select * from EMPLOYEE";
             cmd.CommandType = CommandType.Text;
             OracleDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                ListViewItem item = new ListViewItem(dr["fname"].ToString());
-                item.SubItems.Add(dr["lname"].ToString());
+                ListViewItem item = new ListViewItem(dr["SSN"].ToString());
+                item.SubItems.Add(dr["Fname"].ToString());
+                item.SubItems.Add(dr["Lname"].ToString());
                 item.SubItems.Add(dr["Email"].ToString());
-                item.SubItems.Add(dr["SSN"].ToString());
                 item.SubItems.Add(dr["MOBILENUMBER"].ToString());
+                item.SubItems.Add(dr["Address"].ToString());
                 item.SubItems.Add(dr["BID"].ToString());
-                item.SubItems.Add(dr["ADDRESS"].ToString());
                 listView1.Items.Add(item);
             }
+            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)

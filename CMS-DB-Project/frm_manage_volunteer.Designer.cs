@@ -57,6 +57,7 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_status = new System.Windows.Forms.Label();
             this.volunteerGroupBox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -300,11 +301,12 @@
             this.columnHeader5,
             this.columnHeader6});
             this.volunteerListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.volunteerListView.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.volunteerListView.FullRowSelect = true;
             this.volunteerListView.Location = new System.Drawing.Point(3, 226);
             this.volunteerListView.MultiSelect = false;
             this.volunteerListView.Name = "volunteerListView";
-            this.volunteerListView.Size = new System.Drawing.Size(585, 219);
+            this.volunteerListView.Size = new System.Drawing.Size(585, 195);
             this.volunteerListView.TabIndex = 0;
             this.volunteerListView.UseCompatibleStateImageBehavior = false;
             this.volunteerListView.View = System.Windows.Forms.View.Details;
@@ -347,13 +349,15 @@
             this.tableLayoutPanel1.Controls.Add(this.volunteerListView, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.volunteerGroupBox, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_status, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(591, 448);
             this.tableLayoutPanel1.TabIndex = 27;
             // 
@@ -380,6 +384,16 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(585, 38);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
+            // lbl_status
+            // 
+            this.lbl_status.AutoSize = true;
+            this.lbl_status.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_status.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_status.Location = new System.Drawing.Point(3, 431);
+            this.lbl_status.Name = "lbl_status";
+            this.lbl_status.Size = new System.Drawing.Size(585, 17);
+            this.lbl_status.TabIndex = 2;
+            // 
             // frm_manage_volunteer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,6 +407,7 @@
             this.volunteerGroupBox.ResumeLayout(false);
             this.volunteerGroupBox.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -429,5 +444,6 @@
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label lbl_status;
     }
 }
