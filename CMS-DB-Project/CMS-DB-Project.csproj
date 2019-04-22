@@ -110,6 +110,12 @@
     <Compile Include="frm_manage_volunteer.Designer.cs">
       <DependentUpon>frm_manage_volunteer.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_search_volunteer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_search_volunteer.Designer.cs">
+      <DependentUpon>frm_search_volunteer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="rep1_donations.cs">
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_manage_volunteer.resx">
       <DependentUpon>frm_manage_volunteer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_search_volunteer.resx">
+      <DependentUpon>frm_search_volunteer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

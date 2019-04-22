@@ -40,6 +40,7 @@
             this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeEmployeeInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeReportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +66,8 @@
             // volunteerToolStripMenuItem
             // 
             this.volunteerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manageVolunteerToolStripMenuItem});
+            this.manageVolunteerToolStripMenuItem,
+            this.searchToolStripMenuItem});
             this.volunteerToolStripMenuItem.Name = "volunteerToolStripMenuItem";
             this.volunteerToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.volunteerToolStripMenuItem.Text = "Volunteer";
@@ -73,7 +75,7 @@
             // manageVolunteerToolStripMenuItem
             // 
             this.manageVolunteerToolStripMenuItem.Name = "manageVolunteerToolStripMenuItem";
-            this.manageVolunteerToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
+            this.manageVolunteerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.manageVolunteerToolStripMenuItem.Text = "Manage";
             this.manageVolunteerToolStripMenuItem.Click += new System.EventHandler(this.manageVolunteerToolStripMenuItem_Click);
             // 
@@ -143,6 +145,12 @@
             this.employeeReportToolStripMenuItem1.Size = new System.Drawing.Size(136, 24);
             this.employeeReportToolStripMenuItem1.Text = "Employee Branch";
             this.employeeReportToolStripMenuItem1.Click += new System.EventHandler(this.employeeReportToolStripMenuItem1_Click);
+            // searchToolStripMenuItem
+            // 
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.searchToolStripMenuItem.Text = "Search";
+            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
             // frm_main
             // 
@@ -178,5 +186,6 @@
         private System.Windows.Forms.ToolStripMenuItem changeEmployeeInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem employeeReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem employeeReportToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
     }
 }

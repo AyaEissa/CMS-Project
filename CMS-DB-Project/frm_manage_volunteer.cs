@@ -14,11 +14,11 @@ namespace CMS_DB_Project
 {
     public partial class frm_manage_volunteer : Form
     {
-        string ordb = "Data source = orcl; User id = hr; Password = hr;";
+        string ordb = "Data source = orcl; User id = scott; Password = tiger;";
         OracleConnection con;
         OracleCommand cmd;
         int chooseFlag = -1; //Indicates user choose Add or Edit
-        int lastItemSelected = -1; //Last item selected in list view
+        int lastItemSelected = 0; //Last item selected in list view
 
         public frm_manage_volunteer()
         {
@@ -209,6 +209,7 @@ namespace CMS_DB_Project
                 item.SubItems.Add(dr["Address"].ToString());
                 volunteerListView.Items.Add(item);
             }
+            volunteerListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
             dr.Dispose();
         }

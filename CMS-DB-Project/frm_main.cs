@@ -82,6 +82,11 @@ namespace CMS_DB_Project
         private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_search_volunteer searchVolForm = new frm_search_volunteer();
+            searchVolForm.MdiParent = this;
+            searchVolForm.Show();
         }
     }
 }
