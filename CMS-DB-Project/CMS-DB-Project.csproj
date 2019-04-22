@@ -8,8 +8,9 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>CMS_DB_Project</RootNamespace>
     <AssemblyName>CMS-DB-Project</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -55,6 +56,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CampainReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CampainReport.Designer.cs">
+      <DependentUpon>CampainReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Change Employee Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change Employee Info.Designer.cs">
+      <DependentUpon>Change Employee Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employeeform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employeeform.Designer.cs">
+      <DependentUpon>Employeeform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Bramch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Bramch.Designer.cs">
+      <DependentUpon>Employee_Bramch.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_donations_report.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +124,24 @@
       <DependentUpon>rep1_donations.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="TotalnumberofVolunteers.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TotalnumberofVolunteers.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="CampainReport.resx">
+      <DependentUpon>CampainReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Change Employee Info.resx">
+      <DependentUpon>Change Employee Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employeeform.resx">
+      <DependentUpon>Employeeform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Bramch.resx">
+      <DependentUpon>Employee_Bramch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_donations_report.resx">
       <DependentUpon>frm_donations_report.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +172,10 @@
     <EmbeddedResource Include="rep1_donations.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rep1_donations.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TotalnumberofVolunteers.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TotalnumberofVolunteers.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

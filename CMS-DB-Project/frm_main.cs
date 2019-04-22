@@ -45,6 +45,43 @@ namespace CMS_DB_Project
             donationsReport.Show();
         }
 
+        private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Employeeform Employee = new Employeeform();
+            Employee.MdiParent = this;
+            Employee.Show();
+        }
+
+        private void changeEmployeeInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Change_Employee_Info change = new Change_Employee_Info();
+            change.MdiParent = this;
+            change.Show();
+        }
+
+        private void employeeReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CampainReport cm = new CampainReport();
+            cm.MdiParent = this;
+            cm.Show();
+
+        }
+
+        private void employeeReportToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Employee_Bramch cm = new Employee_Bramch();
+            cm.MdiParent = this;
+            cm.Show();
+        }
+
+        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_search_volunteer searchVolForm = new frm_search_volunteer();
