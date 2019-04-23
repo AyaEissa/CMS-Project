@@ -45,28 +45,6 @@ namespace CMS_DB_Project
             donationsReport.Show();
         }
 
-        private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Employeeform Employee = new Employeeform();
-            Employee.MdiParent = this;
-            Employee.Show();
-        }
-
-        private void changeEmployeeInfoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Change_Employee_Info change = new Change_Employee_Info();
-            change.MdiParent = this;
-            change.Show();
-        }
-
-        private void employeeReportToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CampainReport cm = new CampainReport();
-            cm.MdiParent = this;
-            cm.Show();
-
-        }
-
         private void employeeReportToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Employee_Bramch cm = new Employee_Bramch();
@@ -97,6 +75,20 @@ namespace CMS_DB_Project
             CampaginRep_form camp = new CampaginRep_form();
             camp.MdiParent = this;
             camp.Show();
+        }
+
+        private void manageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Change_Employee_Info change = new Change_Employee_Info();
+            change.MdiParent = this;
+            change.Show();
+        }
+
+        private void viewAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Employeeform Employee = new Employeeform();
+            Employee.MdiParent = this;
+            Employee.Show();
         }
     }
 }
