@@ -92,11 +92,11 @@
     <Compile Include="frm_donations_report.Designer.cs">
       <DependentUpon>frm_donations_report.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_employeesworksforbranch.cs">
+    <Compile Include="frm_master_detail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_employeesworksforbranch.Designer.cs">
-      <DependentUpon>frm_employeesworksforbranch.cs</DependentUpon>
+    <Compile Include="frm_master_detail.Designer.cs">
+      <DependentUpon>frm_master_detail.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_main.cs">
       <SubType>Form</SubType>
@@ -155,8 +155,8 @@
     <EmbeddedResource Include="frm_donations_report.resx">
       <DependentUpon>frm_donations_report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_employeesworksforbranch.resx">
-      <DependentUpon>frm_employeesworksforbranch.cs</DependentUpon>
+    <EmbeddedResource Include="frm_master_detail.resx">
+      <DependentUpon>frm_master_detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>

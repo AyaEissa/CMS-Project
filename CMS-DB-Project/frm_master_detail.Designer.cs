@@ -1,6 +1,6 @@
 ﻿namespace CMS_DB_Project
 {
-    partial class frm_employeesworksforbranch
+    partial class frm_master_detail
     {
         /// <summary>
         /// Required designer variable.
@@ -29,42 +29,32 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.EmployeeGroupBox = new System.Windows.Forms.GroupBox();
             this.employeeDataGridView = new System.Windows.Forms.DataGridView();
-            this.BranchGroupBox = new System.Windows.Forms.GroupBox();
             this.branchDataGridView = new System.Windows.Forms.DataGridView();
+            this.cmb_tables = new System.Windows.Forms.ComboBox();
+            this.grp_type = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
-            this.EmployeeGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).BeginInit();
-            this.BranchGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.branchDataGridView)).BeginInit();
+            this.grp_type.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.EmployeeGroupBox, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.BranchGroupBox, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cmb_tables, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.grp_type, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(657, 455);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // EmployeeGroupBox
-            // 
-            this.EmployeeGroupBox.Controls.Add(this.employeeDataGridView);
-            this.EmployeeGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EmployeeGroupBox.Location = new System.Drawing.Point(3, 230);
-            this.EmployeeGroupBox.Name = "EmployeeGroupBox";
-            this.EmployeeGroupBox.Size = new System.Drawing.Size(651, 222);
-            this.EmployeeGroupBox.TabIndex = 1;
-            this.EmployeeGroupBox.TabStop = false;
-            this.EmployeeGroupBox.Text = "Employee Information";
             // 
             // employeeDataGridView
             // 
@@ -78,25 +68,14 @@
             this.employeeDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.employeeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.employeeDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.employeeDataGridView.Location = new System.Drawing.Point(3, 16);
+            this.employeeDataGridView.Location = new System.Drawing.Point(3, 200);
             this.employeeDataGridView.MultiSelect = false;
             this.employeeDataGridView.Name = "employeeDataGridView";
             this.employeeDataGridView.ReadOnly = true;
             this.employeeDataGridView.RowHeadersVisible = false;
             this.employeeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.employeeDataGridView.Size = new System.Drawing.Size(645, 203);
+            this.employeeDataGridView.Size = new System.Drawing.Size(639, 191);
             this.employeeDataGridView.TabIndex = 0;
-            // 
-            // BranchGroupBox
-            // 
-            this.BranchGroupBox.Controls.Add(this.branchDataGridView);
-            this.BranchGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BranchGroupBox.Location = new System.Drawing.Point(3, 3);
-            this.BranchGroupBox.Name = "BranchGroupBox";
-            this.BranchGroupBox.Size = new System.Drawing.Size(651, 221);
-            this.BranchGroupBox.TabIndex = 0;
-            this.BranchGroupBox.TabStop = false;
-            this.BranchGroupBox.Text = "Branch Information";
             // 
             // branchDataGridView
             // 
@@ -111,29 +90,74 @@
             this.branchDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.branchDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.branchDataGridView.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.branchDataGridView.Location = new System.Drawing.Point(3, 16);
+            this.branchDataGridView.Location = new System.Drawing.Point(3, 3);
             this.branchDataGridView.MultiSelect = false;
             this.branchDataGridView.Name = "branchDataGridView";
             this.branchDataGridView.ReadOnly = true;
             this.branchDataGridView.RowHeadersVisible = false;
             this.branchDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.branchDataGridView.Size = new System.Drawing.Size(645, 202);
+            this.branchDataGridView.Size = new System.Drawing.Size(639, 191);
             this.branchDataGridView.TabIndex = 0;
             // 
-            // frm_employeesworksforbranch
+            // cmb_tables
+            // 
+            this.cmb_tables.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmb_tables.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_tables.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_tables.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_tables.FormattingEnabled = true;
+            this.cmb_tables.Items.AddRange(new object[] {
+            "Branch & Employee",
+            "Branch & Mobile Phones",
+            "Branch & Campaign",
+            "Campaign & Activity"});
+            this.cmb_tables.Location = new System.Drawing.Point(3, 3);
+            this.cmb_tables.Name = "cmb_tables";
+            this.cmb_tables.Size = new System.Drawing.Size(651, 24);
+            this.cmb_tables.TabIndex = 1;
+            this.cmb_tables.SelectedIndexChanged += new System.EventHandler(this.cmb_tables_SelectedIndexChanged);
+            // 
+            // grp_type
+            // 
+            this.grp_type.Controls.Add(this.tableLayoutPanel2);
+            this.grp_type.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grp_type.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grp_type.Location = new System.Drawing.Point(3, 33);
+            this.grp_type.Name = "grp_type";
+            this.grp_type.Size = new System.Drawing.Size(651, 419);
+            this.grp_type.TabIndex = 2;
+            this.grp_type.TabStop = false;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.branchDataGridView, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.employeeDataGridView, 0, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 22);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(645, 394);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // frm_master_detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 455);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "frm_employeesworksforbranch";
-            this.Text = "Employess works for Branch";
+            this.Name = "frm_master_detail";
+            this.Text = "Master-Detail";
             this.Load += new System.EventHandler(this.frm_employeesworksforbranch_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.EmployeeGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).EndInit();
-            this.BranchGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.branchDataGridView)).EndInit();
+            this.grp_type.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -141,9 +165,10 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.GroupBox EmployeeGroupBox;
-        private System.Windows.Forms.GroupBox BranchGroupBox;
         private System.Windows.Forms.DataGridView branchDataGridView;
         private System.Windows.Forms.DataGridView employeeDataGridView;
+        private System.Windows.Forms.ComboBox cmb_tables;
+        private System.Windows.Forms.GroupBox grp_type;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }

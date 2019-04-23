@@ -24,13 +24,6 @@ namespace CMS_DB_Project
             volunteerForm.Show();
         }
 
-        private void employeesWorksForBranchToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frm_employeesworksforbranch empForBranch = new frm_employeesworksforbranch();
-            empForBranch.MdiParent = this;
-            empForBranch.Show();
-        }
-
         private void donorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_manage_donor donorForm = new frm_manage_donor();
@@ -89,6 +82,13 @@ namespace CMS_DB_Project
             Employeeform Employee = new Employeeform();
             Employee.MdiParent = this;
             Employee.Show();
+        }
+
+        private void masterDetailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_master_detail masterDetailForm = new frm_master_detail();
+            masterDetailForm.MdiParent = this;
+            masterDetailForm.Show();
         }
     }
 }
