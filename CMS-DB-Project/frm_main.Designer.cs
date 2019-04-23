@@ -41,8 +41,8 @@
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.donationsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.campaginReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.employeeReportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.noOfVolunteersPerCampaignReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.branchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,8 +54,7 @@
             this.donorToolStripMenuItem,
             this.employeeToolStripMenuItem,
             this.masterDetailToolStripMenuItem,
-            this.reportsToolStripMenuItem,
-            this.employeeReportToolStripMenuItem1});
+            this.reportsToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(605, 24);
@@ -104,7 +103,8 @@
             // 
             this.employeeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageToolStripMenuItem,
-            this.viewAllToolStripMenuItem});
+            this.viewAllToolStripMenuItem,
+            this.branchToolStripMenuItem});
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
             this.employeeToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.employeeToolStripMenuItem.Text = "Employee";
@@ -112,14 +112,14 @@
             // manageToolStripMenuItem
             // 
             this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
-            this.manageToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.manageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.manageToolStripMenuItem.Text = "Manage";
             this.manageToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem_Click);
             // 
             // viewAllToolStripMenuItem
             // 
             this.viewAllToolStripMenuItem.Name = "viewAllToolStripMenuItem";
-            this.viewAllToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.viewAllToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.viewAllToolStripMenuItem.Text = "View All";
             this.viewAllToolStripMenuItem.Click += new System.EventHandler(this.viewAllToolStripMenuItem_Click);
             // 
@@ -139,7 +139,6 @@
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.reportsToolStripMenuItem.Text = "Reports";
-            this.reportsToolStripMenuItem.Click += new System.EventHandler(this.reportsToolStripMenuItem_Click);
             // 
             // donationsReportToolStripMenuItem
             // 
@@ -155,19 +154,19 @@
             this.campaginReportToolStripMenuItem.Text = "Volunteers per Campagin Report";
             this.campaginReportToolStripMenuItem.Click += new System.EventHandler(this.campaginReportToolStripMenuItem_Click);
             // 
-            // employeeReportToolStripMenuItem1
-            // 
-            this.employeeReportToolStripMenuItem1.Name = "employeeReportToolStripMenuItem1";
-            this.employeeReportToolStripMenuItem1.Size = new System.Drawing.Size(111, 20);
-            this.employeeReportToolStripMenuItem1.Text = "Employee Branch";
-            this.employeeReportToolStripMenuItem1.Click += new System.EventHandler(this.employeeReportToolStripMenuItem1_Click);
-            // 
             // noOfVolunteersPerCampaignReportToolStripMenuItem
             // 
             this.noOfVolunteersPerCampaignReportToolStripMenuItem.Name = "noOfVolunteersPerCampaignReportToolStripMenuItem";
             this.noOfVolunteersPerCampaignReportToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
             this.noOfVolunteersPerCampaignReportToolStripMenuItem.Text = "No of Volunteers per Campaign Report";
             this.noOfVolunteersPerCampaignReportToolStripMenuItem.Click += new System.EventHandler(this.noOfVolunteersPerCampaignReportToolStripMenuItem_Click);
+            // 
+            // branchToolStripMenuItem
+            // 
+            this.branchToolStripMenuItem.Name = "branchToolStripMenuItem";
+            this.branchToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.branchToolStripMenuItem.Text = "Branch";
+            this.branchToolStripMenuItem.Click += new System.EventHandler(this.branchToolStripMenuItem_Click);
             // 
             // frm_main
             // 
@@ -198,12 +197,12 @@
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem donationsReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem employeeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem employeeReportToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchDisconnectedToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem campaginReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewAllToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem noOfVolunteersPerCampaignReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem branchToolStripMenuItem;
     }
 }

@@ -80,11 +80,11 @@
     <Compile Include="Employeeform.Designer.cs">
       <DependentUpon>Employeeform.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee_Bramch.cs">
+    <Compile Include="Employee_Branch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employee_Bramch.Designer.cs">
-      <DependentUpon>Employee_Bramch.cs</DependentUpon>
+    <Compile Include="Employee_Branch.Designer.cs">
+      <DependentUpon>Employee_Branch.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_donations_report.cs">
       <SubType>Form</SubType>
@@ -161,8 +161,8 @@
     <EmbeddedResource Include="Employeeform.resx">
       <DependentUpon>Employeeform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee_Bramch.resx">
-      <DependentUpon>Employee_Bramch.cs</DependentUpon>
+    <EmbeddedResource Include="Employee_Branch.resx">
+      <DependentUpon>Employee_Branch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_donations_report.resx">
       <DependentUpon>frm_donations_report.cs</DependentUpon>

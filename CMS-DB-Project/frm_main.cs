@@ -38,17 +38,6 @@ namespace CMS_DB_Project
             donationsReport.Show();
         }
 
-        private void employeeReportToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Employee_Bramch cm = new Employee_Bramch();
-            cm.MdiParent = this;
-            cm.Show();
-        }
-
-        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_search_volunteer_connected searchVolForm = new frm_search_volunteer_connected();
@@ -96,6 +85,13 @@ namespace CMS_DB_Project
             frm_volunteerno_report noOfVolunteersForm = new frm_volunteerno_report();
             noOfVolunteersForm.MdiParent = this;
             noOfVolunteersForm.Show();
+        }
+
+        private void branchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Employee_Branch cm = new Employee_Branch();
+            cm.MdiParent = this;
+            cm.Show();
         }
     }
 }
