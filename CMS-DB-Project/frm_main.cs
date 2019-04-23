@@ -90,5 +90,12 @@ namespace CMS_DB_Project
             masterDetailForm.MdiParent = this;
             masterDetailForm.Show();
         }
+
+        private void noOfVolunteersPerCampaignReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_volunteerno_report noOfVolunteersForm = new frm_volunteerno_report();
+            noOfVolunteersForm.MdiParent = this;
+            noOfVolunteersForm.Show();
+        }
     }
 }

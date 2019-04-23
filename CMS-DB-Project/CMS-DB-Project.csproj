@@ -128,12 +128,24 @@
     <Compile Include="frm_search_volunteer_connected.Designer.cs">
       <DependentUpon>frm_search_volunteer_connected.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_volunteerno_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_volunteerno_report.Designer.cs">
+      <DependentUpon>frm_volunteerno_report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="rep1_donations.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rep1_donations.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt_volunteerno_campaign.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_volunteerno_campaign.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="CampaginReport.rpt">
@@ -173,6 +185,9 @@
     <EmbeddedResource Include="frm_search_volunteer_connected.resx">
       <DependentUpon>frm_search_volunteer_connected.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_volunteerno_report.resx">
+      <DependentUpon>frm_volunteerno_report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -185,6 +200,10 @@
     <EmbeddedResource Include="rep1_donations.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rep1_donations.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_volunteerno_campaign.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_volunteerno_campaign.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
