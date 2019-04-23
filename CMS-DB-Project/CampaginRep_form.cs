@@ -24,14 +24,13 @@ namespace CMS_DB_Project
         {
             CR.SetParameterValue(0, comboBox1.Text);
             crystalReportViewer1.ReportSource = CR;
-
         }
 
         private void CampaginRep_form_Load(object sender, EventArgs e)
         {
             CR = new CampaginReport();
-            foreach (ParameterDiscreteValue v in CR.ParameterFields[0].DefaultValues)
-                comboBox1.Items.Add(v.Value);
+            foreach (ParameterDiscreteValue item in CR.ParameterFields[0].DefaultValues)
+                comboBox1.Items.Add(item.Value.ToString());
         }
     }
 }

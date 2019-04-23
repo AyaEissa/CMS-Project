@@ -68,12 +68,6 @@
     <Compile Include="CampaginRep_form.Designer.cs">
       <DependentUpon>CampaginRep_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="CampainReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CampainReport.Designer.cs">
-      <DependentUpon>CampainReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="Change Employee Info.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,21 +136,12 @@
       <DependentUpon>rep1_donations.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TotalnumberofVolunteers.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TotalnumberofVolunteers.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <EmbeddedResource Include="CampaginReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CampaginReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CampaginRep_form.resx">
       <DependentUpon>CampaginRep_form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CampainReport.resx">
-      <DependentUpon>CampainReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Change Employee Info.resx">
       <DependentUpon>Change Employee Info.cs</DependentUpon>
@@ -200,10 +185,6 @@
     <EmbeddedResource Include="rep1_donations.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rep1_donations.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TotalnumberofVolunteers.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>TotalnumberofVolunteers.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

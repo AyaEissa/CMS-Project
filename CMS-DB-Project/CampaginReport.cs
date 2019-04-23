@@ -106,7 +106,7 @@ namespace CMS_DB_Project {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_CampaginName_parameter {
+        public CrystalDecisions.Shared.IParameterField Parameter_CampaignName {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
