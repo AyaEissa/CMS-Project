@@ -56,11 +56,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CampainReport.cs">
+    <Compile Include="CampaginReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CampaginReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CampaginRep_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CampainReport.Designer.cs">
-      <DependentUpon>CampainReport.cs</DependentUpon>
+    <Compile Include="CampaginRep_form.Designer.cs">
+      <DependentUpon>CampaginRep_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Change Employee Info.cs">
       <SubType>Form</SubType>
@@ -74,11 +80,11 @@
     <Compile Include="Employeeform.Designer.cs">
       <DependentUpon>Employeeform.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee_Bramch.cs">
+    <Compile Include="Employee_Branch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employee_Bramch.Designer.cs">
-      <DependentUpon>Employee_Bramch.cs</DependentUpon>
+    <Compile Include="Employee_Branch.Designer.cs">
+      <DependentUpon>Employee_Branch.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_donations_report.cs">
       <SubType>Form</SubType>
@@ -86,11 +92,11 @@
     <Compile Include="frm_donations_report.Designer.cs">
       <DependentUpon>frm_donations_report.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_employeesworksforbranch.cs">
+    <Compile Include="frm_master_detail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_employeesworksforbranch.Designer.cs">
-      <DependentUpon>frm_employeesworksforbranch.cs</DependentUpon>
+    <Compile Include="frm_master_detail.Designer.cs">
+      <DependentUpon>frm_master_detail.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_main.cs">
       <SubType>Form</SubType>
@@ -122,6 +128,12 @@
     <Compile Include="frm_search_volunteer_connected.Designer.cs">
       <DependentUpon>frm_search_volunteer_connected.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_volunteerno_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_volunteerno_report.Designer.cs">
+      <DependentUpon>frm_volunteerno_report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="rep1_donations.cs">
@@ -130,14 +142,18 @@
       <DependentUpon>rep1_donations.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TotalnumberofVolunteers.cs">
+    <Compile Include="rpt_volunteerno_campaign.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TotalnumberofVolunteers.rpt</DependentUpon>
+      <DependentUpon>rpt_volunteerno_campaign.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="CampainReport.resx">
-      <DependentUpon>CampainReport.cs</DependentUpon>
+    <EmbeddedResource Include="CampaginReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CampaginReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CampaginRep_form.resx">
+      <DependentUpon>CampaginRep_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Change Employee Info.resx">
       <DependentUpon>Change Employee Info.cs</DependentUpon>
@@ -145,14 +161,14 @@
     <EmbeddedResource Include="Employeeform.resx">
       <DependentUpon>Employeeform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee_Bramch.resx">
-      <DependentUpon>Employee_Bramch.cs</DependentUpon>
+    <EmbeddedResource Include="Employee_Branch.resx">
+      <DependentUpon>Employee_Branch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_donations_report.resx">
       <DependentUpon>frm_donations_report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_employeesworksforbranch.resx">
-      <DependentUpon>frm_employeesworksforbranch.cs</DependentUpon>
+    <EmbeddedResource Include="frm_master_detail.resx">
+      <DependentUpon>frm_master_detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
@@ -169,6 +185,9 @@
     <EmbeddedResource Include="frm_search_volunteer_connected.resx">
       <DependentUpon>frm_search_volunteer_connected.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_volunteerno_report.resx">
+      <DependentUpon>frm_volunteerno_report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -182,9 +201,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rep1_donations.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TotalnumberofVolunteers.rpt">
+    <EmbeddedResource Include="rpt_volunteerno_campaign.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>TotalnumberofVolunteers.cs</LastGenOutput>
+      <LastGenOutput>rpt_volunteerno_campaign.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

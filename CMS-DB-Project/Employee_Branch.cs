@@ -12,28 +12,20 @@ using Oracle.DataAccess.Types;
 
 namespace CMS_DB_Project
 {
-    public partial class Employee_Bramch : Form
+    public partial class Employee_Branch : Form
     {
         string ordb = "Data Source=orcl; User Id=hr;Password=hr;";
         OracleConnection conn;
 
-        public Employee_Bramch()
+        public Employee_Branch()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
+            listView1.Items.Clear();
+
             OracleCommand cmd = new OracleCommand(ordb);
             cmd.Connection = conn;
             cmd.CommandText = "GetBranchID";
@@ -43,12 +35,16 @@ namespace CMS_DB_Project
             OracleDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                branchid.Text = dr[0].ToString();
+                ListViewItem item = new ListViewItem(dr["SSN"].ToString());
+                listView1.Items.Add(item);
+                //listView1.DataSource = dr;
             }
+            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+
             dr.Close();
         }
 
-        private void Employee_Bramch_Load(object sender, EventArgs e)
+        private void Employee_Branch_Load(object sender, EventArgs e)
         {
             conn = new OracleConnection(ordb);
             conn.Open();

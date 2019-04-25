@@ -24,13 +24,6 @@ namespace CMS_DB_Project
             volunteerForm.Show();
         }
 
-        private void employeesWorksForBranchToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frm_employeesworksforbranch empForBranch = new frm_employeesworksforbranch();
-            empForBranch.MdiParent = this;
-            empForBranch.Show();
-        }
-
         private void donorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_manage_donor donorForm = new frm_manage_donor();
@@ -45,39 +38,6 @@ namespace CMS_DB_Project
             donationsReport.Show();
         }
 
-        private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Employeeform Employee = new Employeeform();
-            Employee.MdiParent = this;
-            Employee.Show();
-        }
-
-        private void changeEmployeeInfoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Change_Employee_Info change = new Change_Employee_Info();
-            change.MdiParent = this;
-            change.Show();
-        }
-
-        private void employeeReportToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CampainReport cm = new CampainReport();
-            cm.MdiParent = this;
-            cm.Show();
-
-        }
-
-        private void employeeReportToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Employee_Bramch cm = new Employee_Bramch();
-            cm.MdiParent = this;
-            cm.Show();
-        }
-
-        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_search_volunteer_connected searchVolForm = new frm_search_volunteer_connected();
@@ -90,6 +50,48 @@ namespace CMS_DB_Project
             frm_search_volunteer_disconnected searchVolForm = new frm_search_volunteer_disconnected();
             searchVolForm.MdiParent = this;
             searchVolForm.Show();
+        }
+
+        private void campaginReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CampaginRep_form camp = new CampaginRep_form();
+            camp.MdiParent = this;
+            camp.Show();
+        }
+
+        private void manageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Change_Employee_Info change = new Change_Employee_Info();
+            change.MdiParent = this;
+            change.Show();
+        }
+
+        private void viewAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Employeeform Employee = new Employeeform();
+            Employee.MdiParent = this;
+            Employee.Show();
+        }
+
+        private void masterDetailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_master_detail masterDetailForm = new frm_master_detail();
+            masterDetailForm.MdiParent = this;
+            masterDetailForm.Show();
+        }
+
+        private void noOfVolunteersPerCampaignReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_volunteerno_report noOfVolunteersForm = new frm_volunteerno_report();
+            noOfVolunteersForm.MdiParent = this;
+            noOfVolunteersForm.Show();
+        }
+
+        private void branchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Employee_Branch cm = new Employee_Branch();
+            cm.MdiParent = this;
+            cm.Show();
         }
     }
 }

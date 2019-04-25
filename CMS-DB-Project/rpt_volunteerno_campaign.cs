@@ -16,14 +16,14 @@ namespace CMS_DB_Project {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class TotalnumberofVolunteers : ReportClass {
+    public class rpt_volunteerno_campaign : ReportClass {
         
-        public TotalnumberofVolunteers() {
+        public rpt_volunteerno_campaign() {
         }
         
         public override string ResourceName {
             get {
-                return "TotalnumberofVolunteers.rpt";
+                return "rpt_volunteerno_campaign.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace CMS_DB_Project {
         
         public override string FullResourceName {
             get {
-                return "CMS_DB_Project.TotalnumberofVolunteers.rpt";
+                return "CMS_DB_Project.rpt_volunteerno_campaign.rpt";
             }
             set {
                 // Do nothing
@@ -74,7 +74,7 @@ namespace CMS_DB_Project {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection2 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -82,7 +82,7 @@ namespace CMS_DB_Project {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
             get {
                 return this.ReportDefinition.Sections[4];
             }
@@ -90,7 +90,7 @@ namespace CMS_DB_Project {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection2 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
             get {
                 return this.ReportDefinition.Sections[5];
             }
@@ -98,33 +98,17 @@ namespace CMS_DB_Project {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
-            get {
-                return this.ReportDefinition.Sections[6];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
-            get {
-                return this.ReportDefinition.Sections[7];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public CrystalDecisions.CrystalReports.Engine.Section Section5 {
             get {
-                return this.ReportDefinition.Sections[8];
+                return this.ReportDefinition.Sections[6];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedTotalnumberofVolunteers : Component, ICachedReport {
+    public class Cachedrpt_volunteerno_campaign : Component, ICachedReport {
         
-        public CachedTotalnumberofVolunteers() {
+        public Cachedrpt_volunteerno_campaign() {
         }
         
         [Browsable(false)]
@@ -161,7 +145,7 @@ namespace CMS_DB_Project {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            TotalnumberofVolunteers rpt = new TotalnumberofVolunteers();
+            rpt_volunteerno_campaign rpt = new rpt_volunteerno_campaign();
             rpt.Site = this.Site;
             return rpt;
         }
