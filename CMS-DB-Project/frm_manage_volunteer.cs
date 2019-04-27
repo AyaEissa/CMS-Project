@@ -132,6 +132,20 @@ namespace CMS_DB_Project
             con = new OracleConnection(ordb);
             con.Open();
 
+            if (!checkTableExist(con))
+            {
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = con;
+                cmd.CommandText = @"CREATE TABLE Volunteer 
+                                    (EMAIL VARCHAR2(40) PRIMARY KEY,
+                                    FNAME VARCHAR2(10) NOT NULL,
+                                    LNAME VARCHAR2(10) NOT NULL,
+                                    BIRTHDATE DATE NOT NULL,
+                                    MOBILENUMBER VARCHAR2(13) NOT NULL,
+                                    ADDRESS VARCHAR2(50))";
+                cmd.ExecuteNonQuery();
+            }
+
             updateListView();
 
             if (volunteerListView.Items.Count > 0)
@@ -293,6 +307,24 @@ namespace CMS_DB_Project
         private void frm_manage_volunteer_FormClosed(object sender, FormClosedEventArgs e)
         {
             con.Dispose();
+        }
+
+        private bool checkTableExist(OracleConnection connection)
+        {
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = connection;
+            cmd.CommandText = "SELECT * FROM Volunteer";
+            try
+            {
+                cmd.ExecuteReader();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message + "\nConnection: " + connection.ConnectionString + "\nTable will be created for you."
+                    , "SQL Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
         }
     }
 }
