@@ -196,6 +196,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="rep1_donations.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -220,6 +221,21 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\donor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\empolyee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\volunteer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\archive.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
