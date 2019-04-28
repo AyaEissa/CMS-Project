@@ -46,26 +46,28 @@
             this.tableLayoutPanel1.Controls.Add(this.volunteerDataGridView, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(683, 436);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(911, 537);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 267F));
             this.tableLayoutPanel2.Controls.Add(this.txt_search, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cmp_search, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(677, 34);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(903, 41);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // txt_search
@@ -74,9 +76,10 @@
             this.txt_search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_search.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_search.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_search.Location = new System.Drawing.Point(3, 3);
+            this.txt_search.Location = new System.Drawing.Point(4, 4);
+            this.txt_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(471, 27);
+            this.txt_search.Size = new System.Drawing.Size(628, 32);
             this.txt_search.TabIndex = 1;
             this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
             // 
@@ -93,9 +96,10 @@
             "Last Name",
             "Mobile Number",
             "Address"});
-            this.cmp_search.Location = new System.Drawing.Point(480, 3);
+            this.cmp_search.Location = new System.Drawing.Point(640, 4);
+            this.cmp_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmp_search.Name = "cmp_search";
-            this.cmp_search.Size = new System.Drawing.Size(194, 29);
+            this.cmp_search.Size = new System.Drawing.Size(259, 31);
             this.cmp_search.TabIndex = 2;
             this.cmp_search.SelectedIndexChanged += new System.EventHandler(this.cmp_search_SelectedIndexChanged);
             // 
@@ -109,21 +113,23 @@
             this.volunteerDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.volunteerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.volunteerDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.volunteerDataGridView.Location = new System.Drawing.Point(3, 43);
+            this.volunteerDataGridView.Location = new System.Drawing.Point(4, 53);
+            this.volunteerDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.volunteerDataGridView.MultiSelect = false;
             this.volunteerDataGridView.Name = "volunteerDataGridView";
             this.volunteerDataGridView.ReadOnly = true;
             this.volunteerDataGridView.RowHeadersVisible = false;
             this.volunteerDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.volunteerDataGridView.Size = new System.Drawing.Size(677, 390);
+            this.volunteerDataGridView.Size = new System.Drawing.Size(903, 480);
             this.volunteerDataGridView.TabIndex = 3;
             // 
             // frm_search_volunteer_disconnected
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 436);
+            this.ClientSize = new System.Drawing.Size(911, 537);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_search_volunteer_disconnected";
             this.Text = "Search for Volunteer (Disconnected)";
             this.Load += new System.EventHandler(this.frm_search_volunteer_Load);

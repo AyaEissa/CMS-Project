@@ -23,7 +23,9 @@ namespace CMS_DB_Project
         private void button1_Click(object sender, EventArgs e)
         {
             CR.SetParameterValue(0, comboBox1.Text);
+            CR.SetParameterValue(1, textBox1.Text);
             crystalReportViewer1.ReportSource = CR;
+
         }
 
         private void CampaginRep_form_Load(object sender, EventArgs e)
@@ -31,6 +33,19 @@ namespace CMS_DB_Project
             CR = new CampaginReport();
             foreach (ParameterDiscreteValue item in CR.ParameterFields[0].DefaultValues)
                 comboBox1.Items.Add(item.Value.ToString());
+           
+            
+         
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

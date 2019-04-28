@@ -37,7 +37,7 @@ namespace CMS_DB_Project
             {
                 ListViewItem item = new ListViewItem(dr["SSN"].ToString());
                 listView1.Items.Add(item);
-                //listView1.DataSource = dr;
+                
             }
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 

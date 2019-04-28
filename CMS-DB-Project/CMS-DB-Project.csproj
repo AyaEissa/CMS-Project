@@ -74,6 +74,12 @@
     <Compile Include="Change Employee Info.Designer.cs">
       <DependentUpon>Change Employee Info.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employeeform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,11 +148,23 @@
       <DependentUpon>rep1_donations.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
     <Compile Include="rpt_volunteerno_campaign.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rpt_volunteerno_campaign.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Search_mode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search_mode.Designer.cs">
+      <DependentUpon>Search_mode.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CampaginReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -157,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Change Employee Info.resx">
       <DependentUpon>Change Employee Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employeeform.resx">
       <DependentUpon>Employeeform.cs</DependentUpon>
@@ -202,9 +223,15 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rep1_donations.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rpt_volunteerno_campaign.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpt_volunteerno_campaign.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search_mode.resx">
+      <DependentUpon>Search_mode.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -236,6 +263,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\archive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Handshake.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

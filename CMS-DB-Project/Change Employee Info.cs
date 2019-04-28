@@ -31,6 +31,7 @@ namespace CMS_DB_Project
             adapter.Fill(ds,"EMPLOYEE");
             dataGridView1.DataSource = ds.Tables[0];
         }
+        
 
         private void Change_Employee_Info_Load(object sender, EventArgs e)
         {
