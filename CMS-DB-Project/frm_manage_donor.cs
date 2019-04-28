@@ -243,6 +243,14 @@ namespace CMS_DB_Project
             cmd.ExecuteNonQuery();
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
