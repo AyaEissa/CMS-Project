@@ -22,10 +22,15 @@ namespace CMS_DB_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CR.SetParameterValue(0, comboBox1.Text);
-            CR.SetParameterValue(1, textBox1.Text);
+            if (comboBox1.Enabled == true && comboBox1.Text != "")
+                CR.SetParameterValue(0, comboBox1.Text);
+            else
+                CR.SetParameterValue(0, "");
+            if (textBox1.Text != "")
+                CR.SetParameterValue(1, textBox1.Text);
+            else
+                CR.SetParameterValue(1, 0);
             crystalReportViewer1.ReportSource = CR;
-
         }
 
         private void CampaginRep_form_Load(object sender, EventArgs e)
@@ -33,19 +38,14 @@ namespace CMS_DB_Project
             CR = new CampaginReport();
             foreach (ParameterDiscreteValue item in CR.ParameterFields[0].DefaultValues)
                 comboBox1.Items.Add(item.Value.ToString());
-           
-            
-         
         }
 
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
+            if (textBox1.Text == "")
+                comboBox1.Enabled = true;
+            else
+                comboBox1.Enabled = false;
         }
     }
 }
