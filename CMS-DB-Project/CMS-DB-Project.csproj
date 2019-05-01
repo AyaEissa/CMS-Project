@@ -250,21 +250,6 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\donor.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\empolyee.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\report.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\volunteer.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\archive.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Handshake.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
